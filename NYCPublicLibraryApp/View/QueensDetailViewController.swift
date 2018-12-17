@@ -20,9 +20,9 @@ class QueensDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         libraryName.text = library.name
-        libraryAddress.text = DataSupport.formatCompleteAddress(streetAddress: library.address, borough: "Queens", postcode: library.postcode)
+        libraryAddress.text = QueensLibraryFormatter.formatCompleteAddress(streetAddress: library.address, borough: "Queens", postcode: library.postcode)
         libraryPhoneNumber.text = "Phone: " + library.phone
-        libraryHours.text = DataSupport.formatHoursOfOperation(mon: library.mn, tue: library.tu
+        libraryHours.text = QueensLibraryFormatter.formatHoursOfOperation(mon: library.mn, tue: library.tu
             , wed: library.we, thurs: library.th, fri: library.fr, sat: library.sa, sun: library.su)
     }
     

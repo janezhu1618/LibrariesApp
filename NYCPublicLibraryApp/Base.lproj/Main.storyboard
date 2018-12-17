@@ -10,54 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--New York Public LIbrary-->
-        <scene sceneID="NXP-fW-XoO">
-            <objects>
-                <viewController title="New York Public LIbrary" id="9Fh-CL-doH" customClass="NewYorkLibraryViewController" customModule="NYCPublicLibraryApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="UmJ-N0-fWK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rwo-ge-LBc">
-                                <rect key="frame" x="0.0" y="144" width="414" height="669"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="nyCell" id="8sj-VX-1Z3">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8sj-VX-1Z3" id="yN4-65-CDN">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="3ku-ga-fpI" kind="show" id="rus-XY-rLo"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="wqJ-m0-GZE">
-                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="rwo-ge-LBc" firstAttribute="top" secondItem="wqJ-m0-GZE" secondAttribute="bottom" id="IEJ-4I-poD"/>
-                            <constraint firstItem="7ct-7n-Scp" firstAttribute="bottom" secondItem="rwo-ge-LBc" secondAttribute="bottom" id="L0E-aY-Msx"/>
-                            <constraint firstAttribute="trailing" secondItem="rwo-ge-LBc" secondAttribute="trailing" id="M70-E1-lky"/>
-                            <constraint firstItem="7ct-7n-Scp" firstAttribute="trailing" secondItem="wqJ-m0-GZE" secondAttribute="trailing" id="T8W-1T-L4O"/>
-                            <constraint firstItem="wqJ-m0-GZE" firstAttribute="top" secondItem="7ct-7n-Scp" secondAttribute="top" id="Wv1-lt-KWe"/>
-                            <constraint firstItem="rwo-ge-LBc" firstAttribute="leading" secondItem="7ct-7n-Scp" secondAttribute="leading" id="ZS9-fq-B2z"/>
-                            <constraint firstItem="wqJ-m0-GZE" firstAttribute="leading" secondItem="UmJ-N0-fWK" secondAttribute="leading" id="cs7-P0-Bjb"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="7ct-7n-Scp"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="New York" id="Glp-OR-ZIO"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="N23-eZ-CYU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="480" y="-1134"/>
-        </scene>
         <!--Brooklyn Public Library-->
         <scene sceneID="6yh-BF-7MR">
             <objects>
@@ -252,73 +204,11 @@
                     <connections>
                         <segue destination="90R-bv-D4e" kind="relationship" relationship="viewControllers" id="2cZ-wY-XZm"/>
                         <segue destination="IG2-Bc-WV9" kind="relationship" relationship="viewControllers" id="DXD-I7-cSy"/>
-                        <segue destination="9Fh-CL-doH" kind="relationship" relationship="viewControllers" id="SfG-R1-rK2"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hml-Ba-m7z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1225" y="-420"/>
-        </scene>
-        <!--New York Public Library Detail-->
-        <scene sceneID="1i7-hV-A9n">
-            <objects>
-                <viewController title="New York Public Library Detail" id="3ku-ga-fpI" customClass="NewYorkDetailViewController" customModule="NYCPublicLibraryApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="0wD-xn-ka6">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of Library" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEf-wE-q3M">
-                                <rect key="frame" x="11" y="110" width="392" height="32.5"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kFp-E6-2Zg">
-                                <rect key="frame" x="11" y="164.5" width="392" height="26"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RwZ-6a-Dbc">
-                                <rect key="frame" x="11" y="212.5" width="392" height="26"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hours of Operation" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZ6-2d-zn8">
-                                <rect key="frame" x="11" y="260.5" width="392" height="26"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="EZz-bZ-zdt" firstAttribute="trailing" secondItem="kFp-E6-2Zg" secondAttribute="trailing" constant="11" id="ENt-ck-wSq"/>
-                            <constraint firstItem="RwZ-6a-Dbc" firstAttribute="leading" secondItem="EZz-bZ-zdt" secondAttribute="leading" constant="11" id="EWu-7B-t8m"/>
-                            <constraint firstItem="kFp-E6-2Zg" firstAttribute="leading" secondItem="EZz-bZ-zdt" secondAttribute="leading" constant="11" id="GJX-8Z-Qh4"/>
-                            <constraint firstItem="UEf-wE-q3M" firstAttribute="leading" secondItem="EZz-bZ-zdt" secondAttribute="leading" constant="11" id="ITV-bd-htj"/>
-                            <constraint firstItem="wZ6-2d-zn8" firstAttribute="leading" secondItem="EZz-bZ-zdt" secondAttribute="leading" constant="11" id="Ldf-D4-wJy"/>
-                            <constraint firstItem="EZz-bZ-zdt" firstAttribute="trailing" secondItem="RwZ-6a-Dbc" secondAttribute="trailing" constant="11" id="PJH-b4-HGS"/>
-                            <constraint firstItem="kFp-E6-2Zg" firstAttribute="top" secondItem="UEf-wE-q3M" secondAttribute="bottom" constant="22" id="Rju-Em-PCO"/>
-                            <constraint firstItem="UEf-wE-q3M" firstAttribute="top" secondItem="EZz-bZ-zdt" secondAttribute="top" constant="22" id="cSj-AO-HKz"/>
-                            <constraint firstItem="wZ6-2d-zn8" firstAttribute="top" secondItem="RwZ-6a-Dbc" secondAttribute="bottom" constant="22" id="f5g-FD-aK0"/>
-                            <constraint firstItem="EZz-bZ-zdt" firstAttribute="trailing" secondItem="UEf-wE-q3M" secondAttribute="trailing" constant="11" id="jyM-JF-8LF"/>
-                            <constraint firstItem="RwZ-6a-Dbc" firstAttribute="top" secondItem="kFp-E6-2Zg" secondAttribute="bottom" constant="22" id="uCm-cu-lKZ"/>
-                            <constraint firstItem="EZz-bZ-zdt" firstAttribute="trailing" secondItem="wZ6-2d-zn8" secondAttribute="trailing" constant="11" id="y8f-0H-ez6"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="EZz-bZ-zdt"/>
-                    </view>
-                    <connections>
-                        <outlet property="libraryAddress" destination="kFp-E6-2Zg" id="8Ab-KR-J7F"/>
-                        <outlet property="libraryHours" destination="wZ6-2d-zn8" id="nk0-cE-AeH"/>
-                        <outlet property="libraryName" destination="UEf-wE-q3M" id="Doa-CE-hPb"/>
-                        <outlet property="libraryPhoneNumber" destination="RwZ-6a-Dbc" id="ati-aj-XVk"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Bna-SM-Mjr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="480" y="-382"/>
         </scene>
         <!--Brookyn Public Library Detail-->
         <scene sceneID="GPs-Iz-4gV">
