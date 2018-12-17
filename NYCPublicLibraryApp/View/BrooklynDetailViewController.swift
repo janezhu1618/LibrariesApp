@@ -21,8 +21,8 @@ class BrooklynDetailViewController: UIViewController {
         super.viewDidLoad()
         libraryName.text = library.data.title
         libraryAddress.text = "Address: \n" + library.data.address
-        libraryPhoneNumber.text = "Phone: " + library.data.phone
-        libraryHours.text = "Hours of Operation:" + library.data.Monday + library.data.Tuesday + library.data.Wednesday + library.data.Thursday + library.data.Friday + library.data.Saturday + library.data.Sunday
+        libraryPhoneNumber.text = BrooklynLibraryFormatter.formatPhoneNumber(phone: library.data.phone)
+        libraryHours.text = BrooklynLibraryFormatter.formatHoursOfOperation(mon: library.data.Monday, tue: library.data.Tuesday, wed: library.data.Wednesday, thurs: library.data.Thursday, fri: library.data.Friday, sat: library.data.Saturday, sun: library.data.Sunday)
        
     }
 

@@ -52,7 +52,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bv9-r9-4p1"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Brooklyn" id="Dc0-ou-SY4"/>
+                    <tabBarItem key="tabBarItem" title="Brooklyn Public LIbraries" id="Dc0-ou-SY4"/>
                     <connections>
                         <outlet property="brooklynLibrarySearchBar" destination="tEf-Cu-28j" id="KLc-wK-XVF"/>
                         <outlet property="brooklynLibraryTableView" destination="JrN-cA-B9X" id="Lrl-SN-ekv"/>
@@ -104,7 +104,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4tI-4J-GLW"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Queens" id="W1u-ud-4Oj"/>
+                    <tabBarItem key="tabBarItem" title="Queens Public Libraries" id="W1u-ud-4Oj"/>
                     <connections>
                         <outlet property="queensLibrarySearchBar" destination="tMP-3f-Rde" id="11a-lW-LpV"/>
                         <outlet property="queensLibraryTableView" destination="BKX-VK-qlF" id="Jr6-pQ-LEC"/>
@@ -112,7 +112,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CXx-lF-Z1H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1239" y="-1134"/>
+            <point key="canvasLocation" x="500" y="-1134"/>
         </scene>
         <!--Queens Public Library Detail-->
         <scene sceneID="bcg-Hf-zNx">
@@ -173,7 +173,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HHT-fb-dAx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1238" y="-382"/>
+            <point key="canvasLocation" x="500" y="-382"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Mz8-x3-9VU">

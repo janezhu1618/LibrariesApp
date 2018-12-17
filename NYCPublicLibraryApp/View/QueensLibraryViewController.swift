@@ -37,7 +37,6 @@ class QueensLibraryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Queens Public Libraries"
         queensLibraryTableView.dataSource = self
         queensLibrarySearchBar.delegate = self
         getAllBranches()
