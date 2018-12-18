@@ -11,7 +11,7 @@ import UIKit
 class QueensDetailViewController: UIViewController {
     
     @IBOutlet weak var libraryName: UILabel!
-    @IBOutlet weak var libraryAddress: UILabel!
+    @IBOutlet weak var libraryAddress: UITextView!
     @IBOutlet weak var libraryPhoneNumber: UILabel!
     @IBOutlet weak var libraryHours: UILabel!
     
