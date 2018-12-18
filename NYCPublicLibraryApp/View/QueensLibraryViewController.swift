@@ -67,9 +67,9 @@ extension QueensLibraryViewController: UITableViewDataSource {
         return queensLibraries.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = queensLibraryTableView.dequeueReusableCell(withIdentifier: "queensCell", for: indexPath)
+        guard let cell = queensLibraryTableView.dequeueReusableCell(withIdentifier: "queensCell", for: indexPath) as? QueensLibraryTableCell else { return UITableViewCell() }
         let library = queensLibraries[indexPath.row]
-        cell.textLabel?.text = library.name
+        cell.label.text = library.name
         return cell
     }
 }

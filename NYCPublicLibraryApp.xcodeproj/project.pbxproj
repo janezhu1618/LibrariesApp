@@ -10,6 +10,7 @@
 		A57FF5EC21C307D300DC7775 /* QueensDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57FF5EB21C307D300DC7775 /* QueensDetailViewController.swift */; };
 		A57FF60021C46D9300DC7775 /* BrooklynDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57FF5FF21C46D9300DC7775 /* BrooklynDetailViewController.swift */; };
 		A57FF60221C46FE800DC7775 /* BrooklynLibraryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57FF60121C46FE800DC7775 /* BrooklynLibraryData.swift */; };
+		A5B92CE021C9A1E900CF4F39 /* BrooklynLibraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B92CDF21C9A1E900CF4F39 /* BrooklynLibraryTableViewCell.swift */; };
 		A5DF929321C0796300E6F9D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DF929221C0796300E6F9D0 /* AppDelegate.swift */; };
 		A5DF929521C0796300E6F9D0 /* QueensLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DF929421C0796300E6F9D0 /* QueensLibraryViewController.swift */; };
 		A5DF929821C0796300E6F9D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5DF929621C0796300E6F9D0 /* Main.storyboard */; };
@@ -19,12 +20,14 @@
 		A5DF92A721C07B4000E6F9D0 /* BrooklynLibraryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DF92A621C07B4000E6F9D0 /* BrooklynLibraryAPI.swift */; };
 		A5DF92AB21C07D6900E6F9D0 /* QueensLibraryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DF92AA21C07D6900E6F9D0 /* QueensLibraryData.swift */; };
 		A5DF92AF21C07EF400E6F9D0 /* BrooklynLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DF92AE21C07EF400E6F9D0 /* BrooklynLibraryViewController.swift */; };
+		A5EB798F21C8555600CCD037 /* QueensLibraryTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EB798E21C8555600CCD037 /* QueensLibraryTableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A57FF5EB21C307D300DC7775 /* QueensDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueensDetailViewController.swift; sourceTree = "<group>"; };
 		A57FF5FF21C46D9300DC7775 /* BrooklynDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrooklynDetailViewController.swift; sourceTree = "<group>"; };
 		A57FF60121C46FE800DC7775 /* BrooklynLibraryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrooklynLibraryData.swift; sourceTree = "<group>"; };
+		A5B92CDF21C9A1E900CF4F39 /* BrooklynLibraryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrooklynLibraryTableViewCell.swift; sourceTree = "<group>"; };
 		A5DF928F21C0796300E6F9D0 /* NYCPublicLibraryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYCPublicLibraryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5DF929221C0796300E6F9D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5DF929421C0796300E6F9D0 /* QueensLibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueensLibraryViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +39,7 @@
 		A5DF92A621C07B4000E6F9D0 /* BrooklynLibraryAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrooklynLibraryAPI.swift; sourceTree = "<group>"; };
 		A5DF92AA21C07D6900E6F9D0 /* QueensLibraryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueensLibraryData.swift; sourceTree = "<group>"; };
 		A5DF92AE21C07EF400E6F9D0 /* BrooklynLibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrooklynLibraryViewController.swift; sourceTree = "<group>"; };
+		A5EB798E21C8555600CCD037 /* QueensLibraryTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueensLibraryTableCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 			children = (
 				A5DF92AA21C07D6900E6F9D0 /* QueensLibraryData.swift */,
 				A57FF60121C46FE800DC7775 /* BrooklynLibraryData.swift */,
+				A5EB798E21C8555600CCD037 /* QueensLibraryTableCell.swift */,
+				A5B92CDF21C9A1E900CF4F39 /* BrooklynLibraryTableViewCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -187,6 +193,8 @@
 				A57FF60021C46D9300DC7775 /* BrooklynDetailViewController.swift in Sources */,
 				A5DF92A721C07B4000E6F9D0 /* BrooklynLibraryAPI.swift in Sources */,
 				A57FF5EC21C307D300DC7775 /* QueensDetailViewController.swift in Sources */,
+				A5B92CE021C9A1E900CF4F39 /* BrooklynLibraryTableViewCell.swift in Sources */,
+				A5EB798F21C8555600CCD037 /* QueensLibraryTableCell.swift in Sources */,
 				A57FF60221C46FE800DC7775 /* BrooklynLibraryData.swift in Sources */,
 				A5DF929321C0796300E6F9D0 /* AppDelegate.swift in Sources */,
 			);

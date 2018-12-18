@@ -66,9 +66,9 @@ extension BrooklynLibraryViewController: UITableViewDataSource {
         return brooklynLibraries.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = brooklynLibraryTableView.dequeueReusableCell(withIdentifier: "brooklynCell", for: indexPath)
+        guard let cell = brooklynLibraryTableView.dequeueReusableCell(withIdentifier: "brooklynCell", for: indexPath) as?  BrooklynLibraryTableViewCell else { return UITableViewCell() }
         let library = brooklynLibraries[indexPath.row]
-        cell.textLabel?.text = library.data.title
+        cell.label.text = library.data.title
         return cell
     }
 }

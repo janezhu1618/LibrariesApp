@@ -22,14 +22,31 @@
                                 <rect key="frame" x="0.0" y="144" width="414" height="669"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="brooklynCell" id="fmq-Br-5Bs">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="brooklynCell" id="fmq-Br-5Bs" customClass="BrooklynLibraryTableViewCell" customModule="NYCPublicLibraryApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fmq-Br-5Bs" id="tHz-oV-x9Y">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0YP-Dk-TZv">
+                                                    <rect key="frame" x="11" y="0.0" width="392" height="43.5"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="0YP-Dk-TZv" secondAttribute="bottom" id="Csn-ei-wqP"/>
+                                                <constraint firstItem="0YP-Dk-TZv" firstAttribute="top" secondItem="tHz-oV-x9Y" secondAttribute="top" id="UOT-D2-wid"/>
+                                                <constraint firstItem="0YP-Dk-TZv" firstAttribute="leading" secondItem="tHz-oV-x9Y" secondAttribute="leading" constant="11" id="Zvw-Tr-9pa"/>
+                                                <constraint firstAttribute="trailing" secondItem="0YP-Dk-TZv" secondAttribute="trailing" constant="11" id="rIo-PG-RZv"/>
+                                                <constraint firstAttribute="bottom" secondItem="0YP-Dk-TZv" secondAttribute="bottom" id="yrF-9L-Esu"/>
+                                                <constraint firstItem="0YP-Dk-TZv" firstAttribute="top" secondItem="tHz-oV-x9Y" secondAttribute="top" id="zHq-28-BVb"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="label" destination="0YP-Dk-TZv" id="rcm-E2-yxf"/>
                                             <segue destination="IWi-D1-zIy" kind="show" id="BpI-Si-SpO"/>
                                         </connections>
                                     </tableViewCell>
@@ -74,14 +91,29 @@
                                 <rect key="frame" x="0.0" y="144" width="414" height="669"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="queensCell" id="EfO-Nk-hTM">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="queensCell" id="EfO-Nk-hTM" customClass="QueensLibraryTableCell" customModule="NYCPublicLibraryApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EfO-Nk-hTM" id="Ehu-Yb-WCb">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yt2-Nl-hwQ">
+                                                    <rect key="frame" x="11" y="0.0" width="392" height="43.5"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="yt2-Nl-hwQ" firstAttribute="leading" secondItem="Ehu-Yb-WCb" secondAttribute="leading" constant="11" id="FGM-cm-cXd"/>
+                                                <constraint firstAttribute="trailing" secondItem="yt2-Nl-hwQ" secondAttribute="trailing" constant="11" id="Ik9-gV-BxX"/>
+                                                <constraint firstAttribute="bottom" secondItem="yt2-Nl-hwQ" secondAttribute="bottom" id="QVn-0G-bWD"/>
+                                                <constraint firstItem="yt2-Nl-hwQ" firstAttribute="top" secondItem="Ehu-Yb-WCb" secondAttribute="top" id="pf5-cH-dk9"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="label" destination="yt2-Nl-hwQ" id="JUh-iN-WFx"/>
                                             <segue destination="wuG-St-SrE" kind="show" id="ZYx-LK-3xw"/>
                                         </connections>
                                     </tableViewCell>
@@ -112,7 +144,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CXx-lF-Z1H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="500" y="-1134"/>
+            <point key="canvasLocation" x="365" y="-1134"/>
         </scene>
         <!--Queens Public Library Detail-->
         <scene sceneID="bcg-Hf-zNx">
@@ -173,7 +205,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HHT-fb-dAx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="500" y="-382"/>
+            <point key="canvasLocation" x="339" y="-382"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Mz8-x3-9VU">
@@ -189,7 +221,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kxd-re-mMJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2000" y="-421"/>
+            <point key="canvasLocation" x="-1732" y="-698"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ug7-11-7MD">
@@ -208,7 +240,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hml-Ba-m7z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1225" y="-420"/>
+            <point key="canvasLocation" x="-1057" y="-698"/>
         </scene>
         <!--Brookyn Public Library Detail-->
         <scene sceneID="GPs-Iz-4gV">
