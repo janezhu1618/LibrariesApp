@@ -160,66 +160,34 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9i-p9-sp2">
-                                <rect key="frame" x="11" y="164.5" width="392" height="26"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hours of Operation" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYp-4z-Krp">
-                                <rect key="frame" x="11" y="330.5" width="392" height="26"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Address Here, Brooklyn, NY 11219" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2W2-jk-ZY8">
-                                <rect key="frame" x="11" y="190.5" width="392" height="70"/>
+                                <rect key="frame" x="11" y="164.5" width="392" height="697.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="9zZ-Fs-5Vz"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <dataDetectorType key="dataDetectorTypes" address="YES"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" address="YES" calendarEvent="YES"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q6G-Wm-6os">
-                                <rect key="frame" x="11" y="282.5" width="392" height="26"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Y9i-p9-sp2" firstAttribute="top" secondItem="42a-Wh-xoj" secondAttribute="bottom" constant="22" id="06x-Yt-zlN"/>
-                            <constraint firstItem="q6G-Wm-6os" firstAttribute="leading" secondItem="TSQ-0r-Gr4" secondAttribute="leading" constant="11" id="4VH-6V-q8X"/>
                             <constraint firstItem="42a-Wh-xoj" firstAttribute="top" secondItem="TSQ-0r-Gr4" secondAttribute="top" constant="22" id="5it-wa-ScE"/>
-                            <constraint firstItem="hYp-4z-Krp" firstAttribute="leading" secondItem="TSQ-0r-Gr4" secondAttribute="leading" constant="11" id="7S3-Co-MqF"/>
-                            <constraint firstItem="TSQ-0r-Gr4" firstAttribute="trailing" secondItem="hYp-4z-Krp" secondAttribute="trailing" constant="11" id="9iy-He-gZq"/>
-                            <constraint firstItem="q6G-Wm-6os" firstAttribute="top" secondItem="2W2-jk-ZY8" secondAttribute="bottom" constant="22" id="C8I-s1-x9b"/>
                             <constraint firstItem="TSQ-0r-Gr4" firstAttribute="trailing" secondItem="2W2-jk-ZY8" secondAttribute="trailing" constant="11" id="CDl-69-D03"/>
-                            <constraint firstItem="TSQ-0r-Gr4" firstAttribute="trailing" secondItem="q6G-Wm-6os" secondAttribute="trailing" constant="11" id="HhL-2e-0FV"/>
+                            <constraint firstItem="TSQ-0r-Gr4" firstAttribute="bottom" secondItem="2W2-jk-ZY8" secondAttribute="bottom" id="J6W-WZ-DPf"/>
                             <constraint firstItem="42a-Wh-xoj" firstAttribute="leading" secondItem="TSQ-0r-Gr4" secondAttribute="leading" constant="11" id="LTh-QF-cd8"/>
-                            <constraint firstItem="TSQ-0r-Gr4" firstAttribute="trailing" secondItem="Y9i-p9-sp2" secondAttribute="trailing" constant="11" id="Mqd-dD-IOG"/>
-                            <constraint firstItem="hYp-4z-Krp" firstAttribute="top" secondItem="q6G-Wm-6os" secondAttribute="bottom" constant="22" id="Y41-nh-I7k"/>
-                            <constraint firstItem="Y9i-p9-sp2" firstAttribute="leading" secondItem="TSQ-0r-Gr4" secondAttribute="leading" constant="11" id="YgP-jk-h9g"/>
-                            <constraint firstItem="2W2-jk-ZY8" firstAttribute="top" secondItem="Y9i-p9-sp2" secondAttribute="bottom" id="abS-JO-TSk"/>
-                            <constraint firstItem="hYp-4z-Krp" firstAttribute="top" secondItem="q6G-Wm-6os" secondAttribute="bottom" constant="22" id="hhi-9b-j9w"/>
+                            <constraint firstItem="2W2-jk-ZY8" firstAttribute="top" secondItem="42a-Wh-xoj" secondAttribute="bottom" constant="22" id="TJJ-bi-4Ab"/>
                             <constraint firstItem="2W2-jk-ZY8" firstAttribute="leading" secondItem="6tt-Di-4a0" secondAttribute="leading" constant="11" id="kBG-vw-Dcb"/>
                             <constraint firstItem="TSQ-0r-Gr4" firstAttribute="trailing" secondItem="42a-Wh-xoj" secondAttribute="trailing" constant="11" id="nR2-I3-PjV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TSQ-0r-Gr4"/>
                     </view>
                     <connections>
-                        <outlet property="libraryAddress" destination="2W2-jk-ZY8" id="duK-aI-zov"/>
-                        <outlet property="libraryHours" destination="hYp-4z-Krp" id="hbn-Gw-T1q"/>
+                        <outlet property="libraryInfo" destination="2W2-jk-ZY8" id="duK-aI-zov"/>
                         <outlet property="libraryName" destination="42a-Wh-xoj" id="rDy-jB-UcW"/>
-                        <outlet property="libraryPhoneNumber" destination="q6G-Wm-6os" id="mMt-gV-F9u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HHT-fb-dAx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="339" y="-382"/>
+            <point key="canvasLocation" x="364" y="-382"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Mz8-x3-9VU">
@@ -248,8 +216,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="90R-bv-D4e" kind="relationship" relationship="viewControllers" id="2cZ-wY-XZm"/>
                         <segue destination="IG2-Bc-WV9" kind="relationship" relationship="viewControllers" id="DXD-I7-cSy"/>
+                        <segue destination="90R-bv-D4e" kind="relationship" relationship="viewControllers" id="2cZ-wY-XZm"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hml-Ba-m7z" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -270,60 +238,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SGe-hG-Fa4">
-                                <rect key="frame" x="11" y="164.5" width="392" height="26"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1V-nD-FFz">
-                                <rect key="frame" x="11" y="282.5" width="392" height="26"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Address Here, Brooklyn, NY 11219" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eHW-MW-YFm">
-                                <rect key="frame" x="11" y="190.5" width="392" height="70"/>
+                                <rect key="frame" x="11" y="164.5" width="392" height="697.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="mD9-61-cFl"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <dataDetectorType key="dataDetectorTypes" address="YES"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" address="YES" calendarEvent="YES"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hours of Operation" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r58-y1-6BP">
-                                <rect key="frame" x="11" y="330.5" width="392" height="26"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="r58-y1-6BP" firstAttribute="leading" secondItem="fNM-Wo-Cpc" secondAttribute="leading" constant="11" id="43I-Hm-SjO"/>
-                            <constraint firstItem="fNM-Wo-Cpc" firstAttribute="trailing" secondItem="x1V-nD-FFz" secondAttribute="trailing" constant="11" id="7BD-x4-Lph"/>
-                            <constraint firstItem="fNM-Wo-Cpc" firstAttribute="trailing" secondItem="r58-y1-6BP" secondAttribute="trailing" constant="11" id="8go-YP-fFI"/>
-                            <constraint firstItem="eHW-MW-YFm" firstAttribute="top" secondItem="SGe-hG-Fa4" secondAttribute="bottom" id="D7k-zn-yhn"/>
                             <constraint firstItem="Sig-7b-xbv" firstAttribute="leading" secondItem="fNM-Wo-Cpc" secondAttribute="leading" constant="11" id="Gw7-u6-FMb"/>
                             <constraint firstItem="eHW-MW-YFm" firstAttribute="leading" secondItem="fNM-Wo-Cpc" secondAttribute="leading" constant="11" id="H1T-6N-rsB"/>
-                            <constraint firstItem="x1V-nD-FFz" firstAttribute="top" secondItem="eHW-MW-YFm" secondAttribute="bottom" constant="22" id="Jzo-dj-Cg3"/>
                             <constraint firstItem="Sig-7b-xbv" firstAttribute="top" secondItem="fNM-Wo-Cpc" secondAttribute="top" constant="22" id="KWG-vQ-mSL"/>
-                            <constraint firstItem="fNM-Wo-Cpc" firstAttribute="trailing" secondItem="SGe-hG-Fa4" secondAttribute="trailing" constant="11" id="N7o-wV-ETU"/>
-                            <constraint firstItem="r58-y1-6BP" firstAttribute="top" secondItem="x1V-nD-FFz" secondAttribute="bottom" constant="22" id="e8i-3e-UBl"/>
-                            <constraint firstItem="SGe-hG-Fa4" firstAttribute="top" secondItem="Sig-7b-xbv" secondAttribute="bottom" constant="22" id="iwa-Db-hf6"/>
+                            <constraint firstItem="eHW-MW-YFm" firstAttribute="top" secondItem="Sig-7b-xbv" secondAttribute="bottom" constant="22" id="Ovp-Qe-bKt"/>
                             <constraint firstItem="fNM-Wo-Cpc" firstAttribute="trailing" secondItem="Sig-7b-xbv" secondAttribute="trailing" constant="11" id="m21-SW-8IO"/>
-                            <constraint firstItem="SGe-hG-Fa4" firstAttribute="leading" secondItem="fNM-Wo-Cpc" secondAttribute="leading" constant="11" id="sJ6-kw-OgB"/>
                             <constraint firstItem="fNM-Wo-Cpc" firstAttribute="trailing" secondItem="eHW-MW-YFm" secondAttribute="trailing" constant="11" id="sik-bo-Onf"/>
-                            <constraint firstItem="x1V-nD-FFz" firstAttribute="leading" secondItem="fNM-Wo-Cpc" secondAttribute="leading" constant="11" id="uyt-8L-ICf"/>
+                            <constraint firstItem="fNM-Wo-Cpc" firstAttribute="bottom" secondItem="eHW-MW-YFm" secondAttribute="bottom" id="u0E-2h-NDf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fNM-Wo-Cpc"/>
                     </view>
                     <connections>
-                        <outlet property="libraryAddress" destination="eHW-MW-YFm" id="QPn-gI-CvO"/>
-                        <outlet property="libraryHours" destination="r58-y1-6BP" id="a02-pf-7XP"/>
+                        <outlet property="libraryInfo" destination="eHW-MW-YFm" id="QPn-gI-CvO"/>
                         <outlet property="libraryName" destination="Sig-7b-xbv" id="kes-pE-v89"/>
-                        <outlet property="libraryPhoneNumber" destination="x1V-nD-FFz" id="j8N-Uj-BVC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h4y-Hw-Q5e" userLabel="First Responder" sceneMemberID="firstResponder"/>

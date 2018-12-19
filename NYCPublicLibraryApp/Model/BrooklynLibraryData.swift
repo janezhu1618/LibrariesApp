@@ -45,7 +45,7 @@ struct BrooklynLibraryFormatter {
                 updatedArr.append("Closed - Closed")
             }
         }
-        return "Hours of Operation:\n Monday: \(updatedArr[0])\nTuesday: \(updatedArr[1])\nWednesday: \(updatedArr[2])\nThursday: \(updatedArr[3])\nFriday: \(updatedArr[4])\nSaturday: \(updatedArr[5])\nSunday: \(updatedArr[6])"
+        return "Monday: \(updatedArr[0])\nTuesday: \(updatedArr[1])\nWednesday: \(updatedArr[2])\nThursday: \(updatedArr[3])\nFriday: \(updatedArr[4])\nSaturday: \(updatedArr[5])\nSunday: \(updatedArr[6])"
     }
 
 }

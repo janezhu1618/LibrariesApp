@@ -11,18 +11,14 @@ import UIKit
 class QueensDetailViewController: UIViewController {
     
     @IBOutlet weak var libraryName: UILabel!
-    @IBOutlet weak var libraryAddress: UITextView!
-    @IBOutlet weak var libraryPhoneNumber: UILabel!
-    @IBOutlet weak var libraryHours: UILabel!
+    @IBOutlet weak var libraryInfo: UITextView!
     
     var library: QueensLibrary!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         libraryName.text = library.name
-        libraryAddress.text = QueensLibraryFormatter.formatCompleteAddress(streetAddress: library.address, borough: "Queens", postcode: library.postcode)
-        libraryPhoneNumber.text = "Phone: " + library.phone
-        libraryHours.text = QueensLibraryFormatter.formatHoursOfOperation(mon: library.mn, tue: library.tu
+        libraryInfo.text = "Address:\n" + QueensLibraryFormatter.formatCompleteAddress(streetAddress: library.address, borough: "Queens", postcode: library.postcode) + "\n\nPhone Number:\n" + library.phone + "\n\nHours of Operation:\n" + QueensLibraryFormatter.formatHoursOfOperation(mon: library.mn, tue: library.tu
             , wed: library.we, thurs: library.th, fri: library.fr, sat: library.sa, sun: library.su)
     }
     

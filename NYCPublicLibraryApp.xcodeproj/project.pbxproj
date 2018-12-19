@@ -77,8 +77,8 @@
 			isa = PBXGroup;
 			children = (
 				A5DF929421C0796300E6F9D0 /* QueensLibraryViewController.swift */,
-				A5DF92AE21C07EF400E6F9D0 /* BrooklynLibraryViewController.swift */,
 				A57FF5EB21C307D300DC7775 /* QueensDetailViewController.swift */,
+				A5DF92AE21C07EF400E6F9D0 /* BrooklynLibraryViewController.swift */,
 				A57FF5FF21C46D9300DC7775 /* BrooklynDetailViewController.swift */,
 			);
 			path = View;
