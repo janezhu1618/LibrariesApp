@@ -155,26 +155,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of Library" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42a-Wh-xoj">
-                                <rect key="frame" x="11" y="110" width="392" height="32.5"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                <rect key="frame" x="11" y="110" width="392" height="26"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Address Here, Brooklyn, NY 11219" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2W2-jk-ZY8">
-                                <rect key="frame" x="11" y="164.5" width="392" height="697.5"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2W2-jk-ZY8">
+                                <rect key="frame" x="11" y="147" width="392" height="309.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <mutableString key="text">Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation </mutableString>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" address="YES" calendarEvent="YES"/>
                             </textView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="KUK-fP-uCe">
+                                <rect key="frame" x="11" y="478.5" width="392" height="361.5"/>
+                                <viewLayoutGuide key="safeArea" id="0xg-fm-a5I"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="42a-Wh-xoj" firstAttribute="top" secondItem="TSQ-0r-Gr4" secondAttribute="top" constant="22" id="5it-wa-ScE"/>
                             <constraint firstItem="TSQ-0r-Gr4" firstAttribute="trailing" secondItem="2W2-jk-ZY8" secondAttribute="trailing" constant="11" id="CDl-69-D03"/>
-                            <constraint firstItem="TSQ-0r-Gr4" firstAttribute="bottom" secondItem="2W2-jk-ZY8" secondAttribute="bottom" id="J6W-WZ-DPf"/>
+                            <constraint firstAttribute="trailing" secondItem="KUK-fP-uCe" secondAttribute="trailing" constant="11" id="KhA-yP-Fcq"/>
                             <constraint firstItem="42a-Wh-xoj" firstAttribute="leading" secondItem="TSQ-0r-Gr4" secondAttribute="leading" constant="11" id="LTh-QF-cd8"/>
-                            <constraint firstItem="2W2-jk-ZY8" firstAttribute="top" secondItem="42a-Wh-xoj" secondAttribute="bottom" constant="22" id="TJJ-bi-4Ab"/>
+                            <constraint firstItem="2W2-jk-ZY8" firstAttribute="height" secondItem="TSQ-0r-Gr4" secondAttribute="height" multiplier="0.4" id="MnG-lf-Hnu"/>
+                            <constraint firstItem="KUK-fP-uCe" firstAttribute="leading" secondItem="TSQ-0r-Gr4" secondAttribute="leading" constant="11" id="Syo-ex-2dM"/>
+                            <constraint firstItem="2W2-jk-ZY8" firstAttribute="top" secondItem="42a-Wh-xoj" secondAttribute="bottom" constant="11" id="TJJ-bi-4Ab"/>
+                            <constraint firstItem="TSQ-0r-Gr4" firstAttribute="bottom" secondItem="KUK-fP-uCe" secondAttribute="bottom" constant="22" id="TLH-P2-RZh"/>
+                            <constraint firstItem="KUK-fP-uCe" firstAttribute="top" secondItem="2W2-jk-ZY8" secondAttribute="bottom" constant="22" id="Wkc-ox-hCQ"/>
                             <constraint firstItem="2W2-jk-ZY8" firstAttribute="leading" secondItem="6tt-Di-4a0" secondAttribute="leading" constant="11" id="kBG-vw-Dcb"/>
                             <constraint firstItem="TSQ-0r-Gr4" firstAttribute="trailing" secondItem="42a-Wh-xoj" secondAttribute="trailing" constant="11" id="nR2-I3-PjV"/>
                         </constraints>
@@ -182,6 +191,7 @@
                     </view>
                     <connections>
                         <outlet property="libraryInfo" destination="2W2-jk-ZY8" id="duK-aI-zov"/>
+                        <outlet property="libraryMapView" destination="KUK-fP-uCe" id="OXa-7c-83v"/>
                         <outlet property="libraryName" destination="42a-Wh-xoj" id="rDy-jB-UcW"/>
                     </connections>
                 </viewController>
@@ -233,33 +243,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of Library" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sig-7b-xbv">
-                                <rect key="frame" x="11" y="110" width="392" height="32.5"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                <rect key="frame" x="11" y="110" width="392" height="26"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Address Here, Brooklyn, NY 11219" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eHW-MW-YFm">
-                                <rect key="frame" x="11" y="164.5" width="392" height="697.5"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eHW-MW-YFm">
+                                <rect key="frame" x="11" y="147" width="392" height="309.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <mutableString key="text">Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation </mutableString>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" address="YES" calendarEvent="YES"/>
                             </textView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cOD-J5-4Pf">
+                                <rect key="frame" x="11" y="478.5" width="392" height="372.5"/>
+                                <viewLayoutGuide key="safeArea" id="St4-Cm-Wwo"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="cOD-J5-4Pf" firstAttribute="leading" secondItem="fNM-Wo-Cpc" secondAttribute="leading" constant="11" id="EN5-pc-bmR"/>
                             <constraint firstItem="Sig-7b-xbv" firstAttribute="leading" secondItem="fNM-Wo-Cpc" secondAttribute="leading" constant="11" id="Gw7-u6-FMb"/>
                             <constraint firstItem="eHW-MW-YFm" firstAttribute="leading" secondItem="fNM-Wo-Cpc" secondAttribute="leading" constant="11" id="H1T-6N-rsB"/>
+                            <constraint firstItem="fNM-Wo-Cpc" firstAttribute="bottom" secondItem="cOD-J5-4Pf" secondAttribute="bottom" constant="11" id="JlY-Ym-1mS"/>
                             <constraint firstItem="Sig-7b-xbv" firstAttribute="top" secondItem="fNM-Wo-Cpc" secondAttribute="top" constant="22" id="KWG-vQ-mSL"/>
-                            <constraint firstItem="eHW-MW-YFm" firstAttribute="top" secondItem="Sig-7b-xbv" secondAttribute="bottom" constant="22" id="Ovp-Qe-bKt"/>
+                            <constraint firstItem="eHW-MW-YFm" firstAttribute="top" secondItem="Sig-7b-xbv" secondAttribute="bottom" constant="11" id="Ovp-Qe-bKt"/>
+                            <constraint firstItem="cOD-J5-4Pf" firstAttribute="top" secondItem="eHW-MW-YFm" secondAttribute="bottom" constant="22" id="dyo-bk-49w"/>
+                            <constraint firstItem="eHW-MW-YFm" firstAttribute="height" secondItem="fNM-Wo-Cpc" secondAttribute="height" multiplier="0.4" id="eSu-By-ILU"/>
                             <constraint firstItem="fNM-Wo-Cpc" firstAttribute="trailing" secondItem="Sig-7b-xbv" secondAttribute="trailing" constant="11" id="m21-SW-8IO"/>
                             <constraint firstItem="fNM-Wo-Cpc" firstAttribute="trailing" secondItem="eHW-MW-YFm" secondAttribute="trailing" constant="11" id="sik-bo-Onf"/>
-                            <constraint firstItem="fNM-Wo-Cpc" firstAttribute="bottom" secondItem="eHW-MW-YFm" secondAttribute="bottom" id="u0E-2h-NDf"/>
+                            <constraint firstItem="fNM-Wo-Cpc" firstAttribute="trailing" secondItem="cOD-J5-4Pf" secondAttribute="trailing" constant="11" id="yDM-yo-Qwq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fNM-Wo-Cpc"/>
                     </view>
                     <connections>
                         <outlet property="libraryInfo" destination="eHW-MW-YFm" id="QPn-gI-CvO"/>
+                        <outlet property="libraryMap" destination="cOD-J5-4Pf" id="X2O-SF-ge0"/>
                         <outlet property="libraryName" destination="Sig-7b-xbv" id="kes-pE-v89"/>
                     </connections>
                 </viewController>

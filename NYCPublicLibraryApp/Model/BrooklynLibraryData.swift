@@ -20,6 +20,7 @@ struct BPLDataWrap: Codable {
     let title: String
     let address: String
     let phone: String
+    let position: String
     let Monday: String
     let Tuesday: String
     let Wednesday: String
@@ -46,6 +47,23 @@ struct BrooklynLibraryFormatter {
             }
         }
         return "Monday: \(updatedArr[0])\nTuesday: \(updatedArr[1])\nWednesday: \(updatedArr[2])\nThursday: \(updatedArr[3])\nFriday: \(updatedArr[4])\nSaturday: \(updatedArr[5])\nSunday: \(updatedArr[6])"
+    }
+    
+    static func formatCoordinates(getWhat: String, coordinates: String) -> Double {
+        let coordinatesArr = coordinates.components(separatedBy: ", ")
+        if getWhat == "x" {
+            if let xCoor = Double(coordinatesArr[0]) {
+            return xCoor
+            } else {
+                return 0.0
+            }
+        } else {
+            if let yCoor = Double(coordinatesArr[1]) {
+                return yCoor
+            } else {
+                return 0.0
+            }
+        }
     }
 
 }

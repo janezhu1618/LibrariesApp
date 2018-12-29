@@ -21,11 +21,14 @@ struct QueensLibrary: Codable {
     let fr: String
     let sa: String
     let su: String
+    let latitude: String?
+    let longitude: String?
 }
+
 
 struct QueensLibraryFormatter {
     static func formatCompleteAddress(streetAddress: String, borough: String, postcode: String) -> String {
-        return "\(streetAddress) \n\(borough), NY \(postcode)"
+        return "\(streetAddress), \(borough), NY \(postcode)"
     }
     
     static func formatHoursOfOperation(mon: String, tue: String, wed: String, thurs: String, fri: String, sat: String, sun: String) -> String {
