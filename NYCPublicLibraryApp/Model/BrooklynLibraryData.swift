@@ -51,15 +51,15 @@ struct BrooklynLibraryFormatter {
     
     static func formatCoordinates(getWhat: String, coordinates: String) -> Double {
         let coordinatesArr = coordinates.components(separatedBy: ", ")
-        if getWhat == "x" {
-            if let xCoor = Double(coordinatesArr[0]) {
-            return xCoor
+        if getWhat == "latitude" {
+            if let latitude = Double(coordinatesArr[0]) {
+            return latitude
             } else {
                 return 0.0
             }
         } else {
-            if let yCoor = Double(coordinatesArr[1]) {
-                return yCoor
+            if let longitude = Double(coordinatesArr[1]) {
+                return longitude
             } else {
                 return 0.0
             }

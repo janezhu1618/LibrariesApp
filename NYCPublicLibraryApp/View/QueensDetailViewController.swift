@@ -19,11 +19,7 @@ class QueensDetailViewController: UIViewController {
     var library: QueensLibrary!
     private var initialLocation: CLLocation = CLLocation(latitude: 0.0, longitude: 0.0)
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        libraryName.text = library.name
-        libraryInfo.text = "Address:\n" + QueensLibraryFormatter.formatCompleteAddress(streetAddress: library.address, borough: "Queens", postcode: library.postcode) + "\n\nPhone Number: " + library.phone + "\n\nHours of Operation:\n" + QueensLibraryFormatter.formatHoursOfOperation(mon: library.mn, tue: library.tu
-            , wed: library.we, thurs: library.th, fri: library.fr, sat: library.sa, sun: library.su)
+    fileprivate func setUpMap() {
         if let latitude = library.latitude, let longitude = library.longitude {
             if let safeLatitude = Double(latitude), let safeLongitude = Double(longitude) {
                 initialLocation = CLLocation(latitude: safeLatitude, longitude: safeLongitude)
@@ -36,8 +32,16 @@ class QueensDetailViewController: UIViewController {
         centerMapOnLocation(location: initialLocation)
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        libraryName.text = library.name
+        libraryInfo.text = "Address:\n" + QueensLibraryFormatter.formatCompleteAddress(streetAddress: library.address, borough: "Queens", postcode: library.postcode) + "\n\nPhone Number: " + library.phone + "\n\nHours of Operation:\n" + QueensLibraryFormatter.formatHoursOfOperation(mon: library.mn, tue: library.tu
+            , wed: library.we, thurs: library.th, fri: library.fr, sat: library.sa, sun: library.su)
+        setUpMap()
+    }
+    
     let regionRadius: CLLocationDistance = 650
-    func centerMapOnLocation(location: CLLocation) {
+    private func centerMapOnLocation(location: CLLocation) {
         let coordinateRegion = MKCoordinateRegion(center: location.coordinate,
                                                   latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
         libraryMapView.setRegion(coordinateRegion, animated: true)
