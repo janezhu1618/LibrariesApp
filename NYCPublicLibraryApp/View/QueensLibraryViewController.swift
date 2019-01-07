@@ -39,6 +39,7 @@ class QueensLibraryViewController: UIViewController {
         super.viewDidLoad()
         queensLibraryTableView.dataSource = self
         queensLibrarySearchBar.delegate = self
+        queensLibraryTableView.delegate = self
         getAllBranches()
         setupRefreshControl()
     }
@@ -62,12 +63,21 @@ class QueensLibraryViewController: UIViewController {
     }
 }
 
+extension QueensLibraryViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 75
+    }
+}
+
 extension QueensLibraryViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return queensLibraries.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = queensLibraryTableView.dequeueReusableCell(withIdentifier: "queensCell", for: indexPath) as? QueensLibraryTableCell else { return UITableViewCell() }
+        if indexPath.row % 2 == 0 {
+            cell.backgroundColor = .lightGray
+        }
         let library = queensLibraries[indexPath.row]
         cell.label.text = library.name
         return cell

@@ -65,10 +65,10 @@
 		A57FF60621C471B700DC7775 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A5DF92AA21C07D6900E6F9D0 /* QueensLibraryData.swift */,
 				A57FF60121C46FE800DC7775 /* BrooklynLibraryData.swift */,
-				A5EB798E21C8555600CCD037 /* QueensLibraryTableCell.swift */,
+				A5DF92AA21C07D6900E6F9D0 /* QueensLibraryData.swift */,
 				A5B92CDF21C9A1E900CF4F39 /* BrooklynLibraryTableViewCell.swift */,
+				A5EB798E21C8555600CCD037 /* QueensLibraryTableCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -76,10 +76,10 @@
 		A57FF60721C471C900DC7775 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A5DF929421C0796300E6F9D0 /* QueensLibraryViewController.swift */,
-				A57FF5EB21C307D300DC7775 /* QueensDetailViewController.swift */,
 				A5DF92AE21C07EF400E6F9D0 /* BrooklynLibraryViewController.swift */,
+				A5DF929421C0796300E6F9D0 /* QueensLibraryViewController.swift */,
 				A57FF5FF21C46D9300DC7775 /* BrooklynDetailViewController.swift */,
+				A57FF5EB21C307D300DC7775 /* QueensDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";

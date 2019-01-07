@@ -39,6 +39,7 @@ class BrooklynLibraryViewController: UIViewController {
         super.viewDidLoad()
         brooklynLibraryTableView.dataSource = self
         brooklynLibrarySearchBar.delegate = self
+        brooklynLibraryTableView.delegate = self
         getAllBranches()
         setupRefreshControl()
     }
@@ -61,6 +62,7 @@ class BrooklynLibraryViewController: UIViewController {
     }
 
 }
+
 extension BrooklynLibraryViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return brooklynLibraries.count
@@ -68,6 +70,9 @@ extension BrooklynLibraryViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = brooklynLibraryTableView.dequeueReusableCell(withIdentifier: "brooklynCell", for: indexPath) as?  BrooklynLibraryTableViewCell else { return UITableViewCell() }
         let library = brooklynLibraries[indexPath.row]
+        if indexPath.row % 2 == 0 {
+            cell.backgroundColor = .lightGray
+        }
         cell.label.text = library.data.title
         return cell
     }
@@ -78,5 +83,11 @@ extension BrooklynLibraryViewController: UISearchBarDelegate {
         searchBar.resignFirstResponder()
         guard let searchText = searchBar.text else { return }
         brooklynLibraries = brooklynLibraries.filter{ $0.data.title.lowercased().components(separatedBy: " ").contains(searchText.lowercased()) || $0.data.address.lowercased().components(separatedBy: " ").contains(searchText.lowercased()) }
+    }
 }
+
+extension BrooklynLibraryViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 75
+    }
 }
