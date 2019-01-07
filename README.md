@@ -7,4 +7,4 @@ I used to visit public library branches on regular basis to do schoolwork and ch
 ##App Features
 This app was built to list all the public library branches in the New York City boroughs Brooklyn and Queens.  The branches are listed in alphabetical order by their name.  When clicked, information on the branch's phone number, exact address, and hours of operation are displayed. The information is also clickable so that the phone can directly call the number, get the address to find direction, or add hours of operation to the calendar. 
 
-Giphy (https://data.cityofnewyork.us/resource/uvw5-9znb.json)
+Giphy (https://media.giphy.com/media/e5RUwR0zOQbqAQ20ha/giphy.gif)
