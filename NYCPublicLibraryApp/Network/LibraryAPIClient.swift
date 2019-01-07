@@ -24,4 +24,25 @@ final class LibraryAPIClient {
             }
         }
     }
+    
+    static func getFavorites(completionHandler: @escaping (AppError?, [Favorite]?) -> Void) {
+        NetworkHelper.shared.performDataTask(endpointURLString: "https://5c337338e0948000147a77e2.mockapi.io/favorites", httpMethod: "GET", httpBody: nil) { (appError, data, httpResponse) in
+            if let appError = appError {
+                completionHandler(appError, nil)
+            }
+            guard let response = httpResponse, (200...299).contains(response.statusCode) else {
+                let statusCode = httpResponse?.statusCode ?? -999
+                completionHandler(AppError.badStatusCode(statusCode.description), nil)
+                return
+            }
+            if let data = data {
+                do {
+                    let favoritesData = try JSONDecoder().decode([Favorite].self, from: data)
+                    completionHandler(nil, favoritesData)
+                } catch {
+                    completionHandler(AppError.decodingError(error), nil)
+                }
+            }
+        }
+    }
 }

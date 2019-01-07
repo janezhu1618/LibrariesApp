@@ -15,4 +15,5 @@ struct Favorite: Codable {
     let city: String?
     let postcode: String?
     let phone: String
+    let borough: String
 }

@@ -1,49 +1,43 @@
 //
-//  LibraryDetailViewController.swift
+//  BrooklynDetailViewController.swift
 //  NYCPublicLibraryApp
 //
-//  Created by Jane Zhu on 12/13/18.
+//  Created by Jane Zhu on 12/14/18.
 //  Copyright © 2018 Jane Zhu. All rights reserved.
 //
 
 import UIKit
 import MapKit
 
-class QueensDetailViewController: UIViewController {
+class BrooklynDetailViewController: UIViewController {
     
     @IBOutlet weak var libraryName: UILabel!
     @IBOutlet weak var libraryInfo: UITextView!
-    @IBOutlet weak var libraryMapView: MKMapView!
+    @IBOutlet weak var libraryMap: MKMapView!
     
-    var library: QueensLibrary!
-    private var initialLocation: CLLocation = CLLocation(latitude: 0.0, longitude: 0.0)
-    
-    fileprivate func setUpMap() {
-        if let latitude = library.latitude, let longitude = library.longitude {
-            if let safeLatitude = Double(latitude), let safeLongitude = Double(longitude) {
-                initialLocation = CLLocation(latitude: safeLatitude, longitude: safeLongitude)
-                let annotation = MKPointAnnotation()
-                annotation.coordinate = CLLocationCoordinate2D(latitude: safeLatitude, longitude: safeLongitude)
-                annotation.title = library.name
-                libraryMapView.addAnnotation(annotation)
-            }
-        }
+    var library: BPLLocationsWrap!
+
+    fileprivate func setUpMap(_ initialLocation: CLLocation) {
         centerMapOnLocation(location: initialLocation)
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = CLLocationCoordinate2D(latitude: BrooklynLibraryFormatter.formatCoordinates(getWhat: "latitude", coordinates: library.data.position), longitude: BrooklynLibraryFormatter.formatCoordinates(getWhat: "longitude", coordinates: library.data.position))
+        annotation.title = library.data.title
+        libraryMap.addAnnotation(annotation)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        libraryName.text = library.name
-        libraryInfo.text = "Address:\n" + QueensLibraryFormatter.formatCompleteAddress(streetAddress: library.address, borough: "Queens", postcode: library.postcode) + "\n\nPhone Number: " + library.phone + "\n\nHours of Operation:\n" + QueensLibraryFormatter.formatHoursOfOperation(mon: library.mn, tue: library.tu
-            , wed: library.we, thurs: library.th, fri: library.fr, sat: library.sa, sun: library.su)
-        setUpMap()
+        libraryName.text = library.data.title
+        libraryInfo.text =  "Address:\n" + library.data.address + "\n\nPhone Number: " + library.data.phone + "\n\nHours of Operation:\n" + BrooklynLibraryFormatter.formatHoursOfOperation(mon: library.data.Monday, tue: library.data.Tuesday, wed: library.data.Wednesday, thurs: library.data.Thursday, fri: library.data.Friday, sat: library.data.Saturday, sun: library.data.Sunday)
+        let initialLocation = CLLocation(latitude: BrooklynLibraryFormatter.formatCoordinates(getWhat: "latitude", coordinates: library.data.position), longitude: BrooklynLibraryFormatter.formatCoordinates(getWhat: "longitude", coordinates: library.data.position))
+        setUpMap(initialLocation)
+       
     }
-    
     let regionRadius: CLLocationDistance = 650
     private func centerMapOnLocation(location: CLLocation) {
         let coordinateRegion = MKCoordinateRegion(center: location.coordinate,
                                                   latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
-        libraryMapView.setRegion(coordinateRegion, animated: true)
+        libraryMap.setRegion(coordinateRegion, animated: true)
     }
     
     private func showAlert(title: String, message: String) {
@@ -54,7 +48,7 @@ class QueensDetailViewController: UIViewController {
     }
 
     @IBAction func favoriteLibrary(_ sender: UIBarButtonItem) {
-        let favorite = Favorite.init(name: library.name, title: nil, address: library.address, city: library.city, postcode: library.postcode, phone: library.phone)
+        let favorite = Favorite.init(name: nil, title: library.data.title, address: library.data.address, city: nil, postcode: nil, phone: library.data.phone, borough: "Brooklyn")
         
         do {
             let data = try JSONEncoder().encode(favorite)
@@ -77,5 +71,4 @@ class QueensDetailViewController: UIViewController {
             print("encoding error: \(error)")
         }
     }
-    
 }
