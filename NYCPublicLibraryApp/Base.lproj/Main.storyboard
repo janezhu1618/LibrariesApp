@@ -292,7 +292,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="favoriteButton" destination="Ej4-cm-ja9" id="VTK-li-LHd"/>
                         <outlet property="libraryInfo" destination="eHW-MW-YFm" id="QPn-gI-CvO"/>
                         <outlet property="libraryMap" destination="cOD-J5-4Pf" id="X2O-SF-ge0"/>
                         <outlet property="libraryName" destination="Sig-7b-xbv" id="kes-pE-v89"/>

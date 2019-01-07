@@ -13,7 +13,6 @@ class QueensDetailViewController: UIViewController {
     
     @IBOutlet weak var libraryName: UILabel!
     @IBOutlet weak var libraryInfo: UITextView!
-    
     @IBOutlet weak var libraryMapView: MKMapView!
     
     var library: QueensLibrary!
@@ -46,8 +45,37 @@ class QueensDetailViewController: UIViewController {
                                                   latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
         libraryMapView.setRegion(coordinateRegion, animated: true)
     }
+    
+    private func showAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { alert in }
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
+    }
 
     @IBAction func favoriteLibrary(_ sender: UIBarButtonItem) {
+        let favorite = Favorite.init(name: library.name, title: nil, address: library.address, city: library.city, postcode: library.postcode, phone: library.phone)
+        
+        do {
+            let data = try JSONEncoder().encode(favorite)
+            LibraryAPIClient.favoritesLibrary(data: data) { (appError, success) in
+                if let appError = appError {
+                    DispatchQueue.main.async {
+                        self.showAlert(title: "Error Message", message: appError.errorMessage())
+                    }
+                } else if success {
+                    DispatchQueue.main.async {
+                        self.showAlert(title: "Success favorited library", message: "")
+                    }
+                } else {
+                    DispatchQueue.main.async {
+                        self.showAlert(title: "Library was not favorited", message: "")
+                    }
+                }
+            }
+        } catch {
+            print("encoding error: \(error)")
+        }
     }
     
 }
