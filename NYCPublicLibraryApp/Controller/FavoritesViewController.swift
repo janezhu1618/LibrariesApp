@@ -11,6 +11,8 @@ import UIKit
 class FavoritesViewController: UIViewController {
     
     @IBOutlet weak var favoritesTableView: UITableView!
+    private var refreshControl: UIRefreshControl!
+    
     var favorites = [Favorite]() {
         didSet {
             DispatchQueue.main.async {
@@ -18,10 +20,19 @@ class FavoritesViewController: UIViewController {
             }
         }
     }
+    
+    @objc private func fetchFavorites() {
+        refreshControl.endRefreshing()
+        getFavorites()
+    }
+    
+    private func setupRefreshControl() {
+        refreshControl = UIRefreshControl()
+        favoritesTableView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(fetchFavorites), for: .valueChanged)
+    }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        favoritesTableView.dataSource = self
+    fileprivate func getFavorites() {
         LibraryAPIClient.getFavorites { (appError, favorites) in
             if let appError = appError {
                 print(appError.errorMessage())
@@ -30,6 +41,15 @@ class FavoritesViewController: UIViewController {
             }
         }
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        favoritesTableView.dataSource = self
+        getFavorites()
+        setupRefreshControl()
+    }
+    
+    
 
 
 }
