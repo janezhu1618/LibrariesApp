@@ -8,12 +8,6 @@
 
 import Foundation
 
-enum AppError {
-    case badURL(String)
-    case badData(Error)
-    case badDecoding(Error)
-}
-
 final class QueensLibraryAPI {
     static func getAllBranches(completionHandler: @escaping (([QueensLibrary]?, AppError?) -> Void)) {
         guard let myURL = URL.init(string: "https://data.cityofnewyork.us/resource/b67a-vkqb.json") else { completionHandler(nil,.badURL("URL not working"))
