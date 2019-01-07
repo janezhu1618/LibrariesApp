@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A562B7D921E3AC37007DA178 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = A562B7D821E3AC37007DA178 /* Favorites.swift */; };
 		A562B7DB21E3ACAE007DA178 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A562B7DA21E3ACAE007DA178 /* AppError.swift */; };
+		A562B7DD21E3AD0C007DA178 /* LibraryAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A562B7DC21E3AD0C007DA178 /* LibraryAPIClient.swift */; };
 		A57FF5EC21C307D300DC7775 /* QueensDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57FF5EB21C307D300DC7775 /* QueensDetailViewController.swift */; };
 		A57FF60021C46D9300DC7775 /* BrooklynDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57FF5FF21C46D9300DC7775 /* BrooklynDetailViewController.swift */; };
 		A57FF60221C46FE800DC7775 /* BrooklynLibraryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57FF60121C46FE800DC7775 /* BrooklynLibraryData.swift */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		A562B7D821E3AC37007DA178 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
 		A562B7DA21E3ACAE007DA178 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		A562B7DC21E3AD0C007DA178 /* LibraryAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryAPIClient.swift; sourceTree = "<group>"; };
 		A57FF5EB21C307D300DC7775 /* QueensDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueensDetailViewController.swift; sourceTree = "<group>"; };
 		A57FF5FF21C46D9300DC7775 /* BrooklynDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrooklynDetailViewController.swift; sourceTree = "<group>"; };
 		A57FF60121C46FE800DC7775 /* BrooklynLibraryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrooklynLibraryData.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				A562B7DA21E3ACAE007DA178 /* AppError.swift */,
 				A5DF92A421C07B3700E6F9D0 /* QueensLibraryAPI.swift */,
 				A5DF92A621C07B4000E6F9D0 /* BrooklynLibraryAPI.swift */,
+				A562B7DC21E3AD0C007DA178 /* LibraryAPIClient.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				A5DF92AB21C07D6900E6F9D0 /* QueensLibraryData.swift in Sources */,
 				A5DF92AF21C07EF400E6F9D0 /* BrooklynLibraryViewController.swift in Sources */,
 				A5DF92A521C07B3700E6F9D0 /* QueensLibraryAPI.swift in Sources */,
+				A562B7DD21E3AD0C007DA178 /* LibraryAPIClient.swift in Sources */,
 				A5DF929521C0796300E6F9D0 /* QueensLibraryViewController.swift in Sources */,
 				A562B7DB21E3ACAE007DA178 /* AppError.swift in Sources */,
 				A57FF60021C46D9300DC7775 /* BrooklynDetailViewController.swift in Sources */,

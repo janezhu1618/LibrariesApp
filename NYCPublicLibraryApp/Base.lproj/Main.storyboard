@@ -69,7 +69,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bv9-r9-4p1"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Brooklyn Public LIbraries" id="Dc0-ou-SY4"/>
+                    <tabBarItem key="tabBarItem" title="Brooklyn Public LIbraries" image="icon" id="Dc0-ou-SY4"/>
                     <connections>
                         <outlet property="brooklynLibrarySearchBar" destination="tEf-Cu-28j" id="KLc-wK-XVF"/>
                         <outlet property="brooklynLibraryTableView" destination="JrN-cA-B9X" id="Lrl-SN-ekv"/>
@@ -136,7 +136,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4tI-4J-GLW"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Queens Public Libraries" id="W1u-ud-4Oj"/>
+                    <tabBarItem key="tabBarItem" title="Queens Public Libraries" image="icon" id="W1u-ud-4Oj"/>
                     <connections>
                         <outlet property="queensLibrarySearchBar" destination="tMP-3f-Rde" id="11a-lW-LpV"/>
                         <outlet property="queensLibraryTableView" destination="BKX-VK-qlF" id="Jr6-pQ-LEC"/>
@@ -288,4 +288,7 @@
             <point key="canvasLocation" x="-307" y="-382"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon" width="36" height="36"/>
+    </resources>
 </document>
