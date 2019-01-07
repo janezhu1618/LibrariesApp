@@ -14,6 +14,7 @@ class BrooklynDetailViewController: UIViewController {
     @IBOutlet weak var libraryName: UILabel!
     @IBOutlet weak var libraryInfo: UITextView!
     
+    @IBOutlet weak var favoriteButton: UIBarButtonItem!
     @IBOutlet weak var libraryMap: MKMapView!
     
     var library: BPLLocationsWrap!
@@ -40,5 +41,59 @@ class BrooklynDetailViewController: UIViewController {
                                                   latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
         libraryMap.setRegion(coordinateRegion, animated: true)
     }
+    
+    private func showAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { alert in }
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
+    }
 
+    @IBAction func favoriteLibrary(_ sender: UIBarButtonItem) {
+        let favorite = Favorite.init(name: nil, title: library.data.title, address: library.data.address, city: nil, postcode: nil, phone: library.data.phone)
+        
+        do {
+            let data = try JSONEncoder().encode(favorite)
+            LibraryAPIClient.favoritesLibrary(data: data) { (appError, success) in
+                if let appError = appError {
+                    DispatchQueue.main.async {
+                        self.showAlert(title: "Error Message", message: appError.errorMessage())
+                    }
+                } else if success {
+                    DispatchQueue.main.async {
+                        self.showAlert(title: "Success favorited library", message: "")
+                    }
+                } else {
+                    DispatchQueue.main.async {
+                        self.showAlert(title: "Library was not favorited", message: "")
+                    }
+                }
+            }
+        } catch {
+            print("encoding error: \(error)")
+        }
+//        let favorite = Favorite.init(elementName: element.name, favoritedBy: Constants.Name, elementSymbol: element.symbol)
+//        
+//        do {
+//            let data = try JSONEncoder().encode(favorite)
+//            ElementAPIClient.favoriteElement(data: data) { (appError, success) in
+//                if let appError = appError {
+//                    DispatchQueue.main.async {
+//                        self.showAlert(title: "Error Message", message: appError.errorMessage())
+//                    }
+//                } else if success {
+//                    DispatchQueue.main.async {
+//                        self.showAlert(title: "Successfully favorited element", message: "")
+//                    }
+//                } else {
+//                    DispatchQueue.main.async {
+//                        self.showAlert(title: "element was not favorited", message: "")
+//                    }
+//                }
+//            }
+//        } catch {
+//            print("encoding error: \(error)")
+//        }
+//    }
+    }
 }

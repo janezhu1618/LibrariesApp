@@ -47,5 +47,7 @@ class QueensDetailViewController: UIViewController {
         libraryMapView.setRegion(coordinateRegion, animated: true)
     }
 
-
+    @IBAction func favoriteLibrary(_ sender: UIBarButtonItem) {
+    }
+    
 }

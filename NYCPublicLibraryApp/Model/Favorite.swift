@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Favorites: Codable {
+struct Favorite: Codable {
     let name: String?
     let title: String?
     let address: String

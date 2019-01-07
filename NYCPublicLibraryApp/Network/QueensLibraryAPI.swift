@@ -14,14 +14,14 @@ final class QueensLibraryAPI {
             return }
         URLSession.shared.dataTask(with: myURL) { (data, response, error) in
         if let error = error {
-            completionHandler(nil,.badData(error))
+            completionHandler(nil,.decodingError(error))
         }
         if let data = data {
             do {
                 let queensLibraryData = try JSONDecoder().decode([QueensLibrary].self, from: data)
                 completionHandler(queensLibraryData, nil)
             } catch {
-                completionHandler(nil,.badDecoding(error))
+                completionHandler(nil,.decodingError(error))
             }
         }
     }.resume()

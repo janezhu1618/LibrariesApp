@@ -15,14 +15,14 @@ final class BrooklynLibraryAPI {
         return }
         URLSession.shared.dataTask(with: myURL) { (data, response, error) in
             if let error = error {
-                completionHandler(nil,.badData(error))
+                completionHandler(nil,.decodingError(error))
             }
             if let data = data {
                 do {
                     let brooklynLibraryData = try JSONDecoder().decode(BrooklynLibrary.self, from: data)
                     completionHandler(brooklynLibraryData.locations, nil)
                 } catch {
-                    completionHandler(nil,.badDecoding(error))
+                    completionHandler(nil,.decodingError(error))
                 }
             }
         }.resume()

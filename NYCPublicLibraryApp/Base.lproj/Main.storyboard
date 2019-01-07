@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="144" width="414" height="669"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="brooklynCell" id="fmq-Br-5Bs" customClass="BrooklynLibraryTableViewCell" customModule="NYCPublicLibraryApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="brooklynCell" id="fmq-Br-5Bs" customClass="BrooklynLibraryTableViewCell" customModule="NYCPublicLibraryApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fmq-Br-5Bs" id="tHz-oV-x9Y">
@@ -91,7 +91,7 @@
                                 <rect key="frame" x="0.0" y="144" width="414" height="669"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="queensCell" id="EfO-Nk-hTM" customClass="QueensLibraryTableCell" customModule="NYCPublicLibraryApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="queensCell" id="EfO-Nk-hTM" customClass="QueensLibraryTableCell" customModule="NYCPublicLibraryApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EfO-Nk-hTM" id="Ehu-Yb-WCb">
@@ -189,6 +189,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TSQ-0r-Gr4"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Queens Library Detail" id="hth-01-yMM">
+                        <barButtonItem key="rightBarButtonItem" title="⭐️ Favorite" id="xeE-aI-kL4">
+                            <connections>
+                                <action selector="favoriteLibrary:" destination="wuG-St-SrE" id="Clx-IB-J7z"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="libraryInfo" destination="2W2-jk-ZY8" id="duK-aI-zov"/>
                         <outlet property="libraryMapView" destination="KUK-fP-uCe" id="OXa-7c-83v"/>
@@ -277,7 +284,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fNM-Wo-Cpc"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Brooklyn Library Detail" id="VaF-Cb-deu">
+                        <barButtonItem key="rightBarButtonItem" title="⭐️ Favorite" id="Ej4-cm-ja9">
+                            <connections>
+                                <action selector="favoriteLibrary:" destination="IWi-D1-zIy" id="Q5d-iD-PYk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="favoriteButton" destination="Ej4-cm-ja9" id="VTK-li-LHd"/>
                         <outlet property="libraryInfo" destination="eHW-MW-YFm" id="QPn-gI-CvO"/>
                         <outlet property="libraryMap" destination="cOD-J5-4Pf" id="X2O-SF-ge0"/>
                         <outlet property="libraryName" destination="Sig-7b-xbv" id="kes-pE-v89"/>
