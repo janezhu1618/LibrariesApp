@@ -13,7 +13,7 @@ class BrooklynLibraryViewController: UIViewController {
     @IBOutlet weak var brooklynLibraryTableView: UITableView!
     @IBOutlet weak var brooklynLibrarySearchBar: UISearchBar!
 
-    @IBOutlet var noResultsMessageView: UIView!
+    @IBOutlet var noItemMessageView: UIView!
     
     
     private var refreshControl: UIRefreshControl!
@@ -40,7 +40,7 @@ class BrooklynLibraryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        brooklynLibraryTableView.backgroundView = noResultsMessageView
+        brooklynLibraryTableView.backgroundView = noItemMessageView
         brooklynLibraryTableView.dataSource = self
         brooklynLibrarySearchBar.delegate = self
         brooklynLibraryTableView.delegate = self
@@ -72,7 +72,7 @@ extension BrooklynLibraryViewController: UITableViewDataSource {
         return brooklynLibraries.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = brooklynLibraryTableView.dequeueReusableCell(withIdentifier: "brooklynCell", for: indexPath) as?  BrooklynLibraryTableViewCell else { return UITableViewCell() }
+        guard let cell = brooklynLibraryTableView.dequeueReusableCell(withIdentifier: "brooklynCell", for: indexPath) as?  BrooklynLibraryCell else { return UITableViewCell() }
         let library = brooklynLibraries[indexPath.row]
         if indexPath.row % 2 == 0 {
             cell.backgroundColor = .lightGray

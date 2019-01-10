@@ -1,17 +1,17 @@
 //
-//  BrooklynLibraryTableViewCell.swift
+//  NYPLCell.swift
 //  NYCPublicLibraryApp
 //
-//  Created by Jane Zhu on 12/18/18.
-//  Copyright © 2018 Jane Zhu. All rights reserved.
+//  Created by Jane Zhu on 1/9/19.
+//  Copyright © 2019 Jane Zhu. All rights reserved.
 //
 
 import UIKit
 
-class BrooklynLibraryTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var label: UILabel!
+class NYPLCell: UITableViewCell {
     
+    @IBOutlet weak var label: UILabel!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

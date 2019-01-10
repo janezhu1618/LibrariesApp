@@ -13,9 +13,7 @@ class QueensLibraryViewController: UIViewController {
     @IBOutlet weak var queensLibraryTableView: UITableView!
     @IBOutlet weak var queensLibrarySearchBar: UISearchBar!
     
-
-    @IBOutlet var noResultsMessageView: UIView!
-    
+    @IBOutlet var noItemMessageView: UIView!
     private var refreshControl: UIRefreshControl!
 
     var queensLibraries = [QueensLibrary]() {
@@ -40,7 +38,7 @@ class QueensLibraryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        queensLibraryTableView.backgroundView = noResultsMessageView
+        queensLibraryTableView.backgroundView = noItemMessageView
         queensLibraryTableView.dataSource = self
         queensLibrarySearchBar.delegate = self
         queensLibraryTableView.delegate = self
@@ -78,7 +76,7 @@ extension QueensLibraryViewController: UITableViewDataSource {
         return queensLibraries.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = queensLibraryTableView.dequeueReusableCell(withIdentifier: "queensCell", for: indexPath) as? QueensLibraryTableCell else { return UITableViewCell() }
+        guard let cell = queensLibraryTableView.dequeueReusableCell(withIdentifier: "queensCell", for: indexPath) as? QueensLibraryCell else { return UITableViewCell() }
         if indexPath.row % 2 == 0 {
             cell.backgroundColor = .lightGray
         } else {

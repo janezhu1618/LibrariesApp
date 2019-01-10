@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="144" width="414" height="669"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="brooklynCell" id="fmq-Br-5Bs" customClass="BrooklynLibraryTableViewCell" customModule="NYCPublicLibraryApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="brooklynCell" id="fmq-Br-5Bs" customClass="BrooklynLibraryCell" customModule="NYCPublicLibraryApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fmq-Br-5Bs" id="tHz-oV-x9Y">
@@ -69,11 +69,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bv9-r9-4p1"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Brooklyn Public LIbraries" image="icon" id="Dc0-ou-SY4"/>
+                    <tabBarItem key="tabBarItem" title="Brooklyn" image="icon" id="Dc0-ou-SY4"/>
                     <connections>
                         <outlet property="brooklynLibrarySearchBar" destination="tEf-Cu-28j" id="KLc-wK-XVF"/>
                         <outlet property="brooklynLibraryTableView" destination="JrN-cA-B9X" id="Lrl-SN-ekv"/>
-                        <outlet property="noResultsMessageView" destination="Of7-bs-Tyx" id="zUR-PA-qvJ"/>
+                        <outlet property="noItemMessageView" destination="Of7-bs-Tyx" id="kr0-MS-Qod"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qSt-TF-mpX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -110,7 +110,7 @@
                                 <rect key="frame" x="0.0" y="144" width="414" height="669"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="queensCell" id="EfO-Nk-hTM" customClass="QueensLibraryTableCell" customModule="NYCPublicLibraryApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="queensCell" id="EfO-Nk-hTM" customClass="QueensLibraryCell" customModule="NYCPublicLibraryApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EfO-Nk-hTM" id="Ehu-Yb-WCb">
@@ -132,8 +132,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="label" destination="yt2-Nl-hwQ" id="JUh-iN-WFx"/>
-                                            <segue destination="wuG-St-SrE" kind="show" id="ZYx-LK-3xw"/>
+                                            <outlet property="label" destination="yt2-Nl-hwQ" id="Zjh-8L-xiZ"/>
+                                            <segue destination="wuG-St-SrE" kind="show" id="XJe-Ug-8nx"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -155,9 +155,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4tI-4J-GLW"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Queens Public Libraries" image="icon" id="W1u-ud-4Oj"/>
+                    <tabBarItem key="tabBarItem" title="Queens" image="icon" id="W1u-ud-4Oj"/>
                     <connections>
-                        <outlet property="noResultsMessageView" destination="zht-3R-89Y" id="FOa-zG-wsW"/>
+                        <outlet property="noItemMessageView" destination="zht-3R-89Y" id="eH1-be-DDy"/>
                         <outlet property="queensLibrarySearchBar" destination="tMP-3f-Rde" id="11a-lW-LpV"/>
                         <outlet property="queensLibraryTableView" destination="BKX-VK-qlF" id="Jr6-pQ-LEC"/>
                     </connections>
@@ -239,7 +239,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3D1-rM-GUk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1107" y="-1134"/>
+            <point key="canvasLocation" x="2684" y="-1539"/>
         </scene>
         <!--Queens Public Library Detail-->
         <scene sceneID="bcg-Hf-zNx">
@@ -310,7 +310,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="HUZ-qj-ij8" kind="relationship" relationship="rootViewController" id="pOf-Z6-R0z"/>
+                        <segue destination="HUZ-qj-ij8" kind="relationship" relationship="rootViewController" id="mE2-Wr-Xie"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kxd-re-mMJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -328,6 +328,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <segue destination="aLL-4x-vue" kind="relationship" relationship="viewControllers" id="Hwi-bV-GWh"/>
                         <segue destination="IG2-Bc-WV9" kind="relationship" relationship="viewControllers" id="DXD-I7-cSy"/>
                         <segue destination="90R-bv-D4e" kind="relationship" relationship="viewControllers" id="2cZ-wY-XZm"/>
                         <segue destination="G9o-T0-clO" kind="relationship" relationship="viewControllers" id="iHA-GR-fkd"/>
@@ -396,6 +397,93 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h4y-Hw-Q5e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-307" y="-382"/>
+        </scene>
+        <!--New York Public Library-->
+        <scene sceneID="YZ4-7q-4Rd">
+            <objects>
+                <viewController title="New York Public Library" id="aLL-4x-vue" customClass="NYPLViewController" customModule="NYCPublicLibraryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ipf-hR-JRT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="33s-tD-LIJ" userLabel="nyplTableView">
+                                <rect key="frame" x="0.0" y="144" width="414" height="669"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="nyplCell" id="9gk-d9-NJd" customClass="NYPLCell" customModule="NYCPublicLibraryApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9gk-d9-NJd" id="olp-Dl-7dK">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rF5-hv-0qU">
+                                                    <rect key="frame" x="11" y="0.0" width="392" height="43.5"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="rF5-hv-0qU" firstAttribute="leading" secondItem="olp-Dl-7dK" secondAttribute="leading" constant="11" id="6nV-q0-t2m"/>
+                                                <constraint firstAttribute="bottom" secondItem="rF5-hv-0qU" secondAttribute="bottom" id="GdP-gP-g6q"/>
+                                                <constraint firstAttribute="bottom" secondItem="rF5-hv-0qU" secondAttribute="bottom" id="HlP-j8-Al5"/>
+                                                <constraint firstItem="rF5-hv-0qU" firstAttribute="top" secondItem="olp-Dl-7dK" secondAttribute="top" id="jRR-UP-Ujj"/>
+                                                <constraint firstItem="rF5-hv-0qU" firstAttribute="top" secondItem="olp-Dl-7dK" secondAttribute="top" id="zeZ-Qz-hyF"/>
+                                                <constraint firstAttribute="trailing" secondItem="rF5-hv-0qU" secondAttribute="trailing" constant="11" id="zvQ-dl-hcg"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="label" destination="rF5-hv-0qU" id="peP-Ry-ped"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="1ii-wa-sCC">
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hhT-LO-y9O" firstAttribute="trailing" secondItem="33s-tD-LIJ" secondAttribute="trailing" id="0xb-Z5-kKD"/>
+                            <constraint firstItem="33s-tD-LIJ" firstAttribute="top" secondItem="1ii-wa-sCC" secondAttribute="bottom" id="u5y-Tl-3Rb"/>
+                            <constraint firstAttribute="trailing" secondItem="1ii-wa-sCC" secondAttribute="trailing" id="wQA-lQ-E8b"/>
+                            <constraint firstItem="33s-tD-LIJ" firstAttribute="leading" secondItem="hhT-LO-y9O" secondAttribute="leading" id="xCl-AG-78F"/>
+                            <constraint firstItem="1ii-wa-sCC" firstAttribute="top" secondItem="hhT-LO-y9O" secondAttribute="top" id="xEo-dx-EY8"/>
+                            <constraint firstItem="1ii-wa-sCC" firstAttribute="leading" secondItem="hhT-LO-y9O" secondAttribute="leading" id="y6N-G7-iQh"/>
+                            <constraint firstItem="hhT-LO-y9O" firstAttribute="bottom" secondItem="33s-tD-LIJ" secondAttribute="bottom" id="y7i-hy-DIB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hhT-LO-y9O"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="NYPL" image="icon" id="hKc-T9-nMU"/>
+                    <navigationItem key="navigationItem" id="AwM-Zv-LBe"/>
+                    <connections>
+                        <outlet property="noItemMessageView" destination="sHo-MH-IPD" id="XBk-x3-4L9"/>
+                        <outlet property="nyplTableView" destination="33s-tD-LIJ" id="x6O-EJ-j6z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ehB-FW-cgD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="sHo-MH-IPD">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No items" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FzT-c8-DST">
+                            <rect key="frame" x="86" y="58.5" width="68" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="FzT-c8-DST" firstAttribute="centerY" secondItem="nT3-5G-bz9" secondAttribute="centerY" id="AUv-fX-L8b"/>
+                        <constraint firstItem="FzT-c8-DST" firstAttribute="centerX" secondItem="nT3-5G-bz9" secondAttribute="centerX" id="us4-qe-688"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="nT3-5G-bz9"/>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="1073.913043478261" y="-1134.375"/>
         </scene>
     </scenes>
     <resources>
