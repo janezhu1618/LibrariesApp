@@ -65,7 +65,7 @@ class QueensDetailViewController: UIViewController {
                     }
                 } else if success {
                     DispatchQueue.main.async {
-                        self.showAlert(title: "Success favorited library", message: "")
+                        self.showAlert(title: "Successfully favorited library", message: "")
                     }
                 } else {
                     DispatchQueue.main.async {

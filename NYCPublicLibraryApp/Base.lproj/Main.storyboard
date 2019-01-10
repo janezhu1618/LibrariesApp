@@ -257,7 +257,7 @@
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2W2-jk-ZY8">
                                 <rect key="frame" x="11" y="147" width="392" height="309.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation </string>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -285,7 +285,7 @@
                         <viewLayoutGuide key="safeArea" id="TSQ-0r-Gr4"/>
                     </view>
                     <navigationItem key="navigationItem" title="Queens Library Detail" id="hth-01-yMM">
-                        <barButtonItem key="rightBarButtonItem" title="⭐️ Favorite" id="xeE-aI-kL4">
+                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="xeE-aI-kL4">
                             <connections>
                                 <action selector="favoriteLibrary:" destination="wuG-St-SrE" id="Clx-IB-J7z"/>
                             </connections>
@@ -353,7 +353,7 @@
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eHW-MW-YFm">
                                 <rect key="frame" x="11" y="147" width="392" height="309.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation </string>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -381,7 +381,7 @@
                         <viewLayoutGuide key="safeArea" id="fNM-Wo-Cpc"/>
                     </view>
                     <navigationItem key="navigationItem" title="Brooklyn Library Detail" id="VaF-Cb-deu">
-                        <barButtonItem key="rightBarButtonItem" title="⭐️ Favorite" id="Ej4-cm-ja9">
+                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="Ej4-cm-ja9">
                             <connections>
                                 <action selector="favoriteLibrary:" destination="IWi-D1-zIy" id="Q5d-iD-PYk"/>
                             </connections>
