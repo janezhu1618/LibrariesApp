@@ -11,7 +11,7 @@ import UIKit
 class NYPLViewController: UIViewController {
 
     @IBOutlet weak var nyplTableView: UITableView!
-    
+    @IBOutlet weak var nyplSearchBar: UISearchBar!
     @IBOutlet var noItemMessageView: UIView!
      private var refreshControl: UIRefreshControl!
     
@@ -22,6 +22,7 @@ class NYPLViewController: UIViewController {
             }
         }
     }
+    
     fileprivate func getAllBranches() {
         NyplAPI.getAllBranches { (nypl, appError) in
             if let appError = appError {
@@ -37,7 +38,9 @@ class NYPLViewController: UIViewController {
         nyplTableView.backgroundView = noItemMessageView
         nyplTableView.dataSource = self
         nyplTableView.delegate = self
+        nyplSearchBar.delegate = self
         getAllBranches()
+        setupRefreshControl()
     }
     
     @objc private func fetchLibraries() {
@@ -67,7 +70,7 @@ extension NYPLViewController: UITableViewDataSource {
         }
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return nypl.count
+        return nypl[section].count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = nyplTableView.dequeueReusableCell(withIdentifier: "nyplCell", for: indexPath) as? NYPLCell else { return UITableViewCell() }
@@ -88,5 +91,17 @@ extension NYPLViewController: UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
+    }
+}
+
+extension NYPLViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        guard let searchText = searchBar.text else { return }
+        var results = [[NYPL]]()
+        for section in nypl {
+            results.append(section.filter{ $0.name.lowercased().components(separatedBy: " ").contains(searchText.lowercased()) || $0.zip.lowercased().components(separatedBy: " ").contains(searchText.lowercased()) || $0.streetname.lowercased().components(separatedBy: " ").contains(searchText.lowercased()) })
+        }
+        nypl = results
     }
 }

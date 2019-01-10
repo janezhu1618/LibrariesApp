@@ -460,6 +460,7 @@
                     <navigationItem key="navigationItem" id="AwM-Zv-LBe"/>
                     <connections>
                         <outlet property="noItemMessageView" destination="sHo-MH-IPD" id="XBk-x3-4L9"/>
+                        <outlet property="nyplSearchBar" destination="1ii-wa-sCC" id="Qyi-G9-qE3"/>
                         <outlet property="nyplTableView" destination="33s-tD-LIJ" id="x6O-EJ-j6z"/>
                     </connections>
                 </viewController>
