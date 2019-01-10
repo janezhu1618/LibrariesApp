@@ -9,11 +9,10 @@
 import Foundation
 
 struct Favorite: Codable {
-    let name: String?
-    let title: String?
+    let name: String
     let address: String
     let city: String?
     let postcode: String?
-    let phone: String
+    let phone: String?
     let borough: String
 }

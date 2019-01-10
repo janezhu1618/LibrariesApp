@@ -54,6 +54,13 @@ class NYPLViewController: UIViewController {
         refreshControl.addTarget(self, action: #selector(fetchLibraries), for: .valueChanged)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destination = segue.destination as? NYPLDetailViewController, let indexPath = nyplTableView.indexPathForSelectedRow
+            else { return }
+        let library = nypl[indexPath.section][indexPath.row]
+        destination.library = library
+    }
+    
 }
 
 extension NYPLViewController: UITableViewDataSource {

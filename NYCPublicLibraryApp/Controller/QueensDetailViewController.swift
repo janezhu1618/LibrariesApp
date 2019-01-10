@@ -54,7 +54,7 @@ class QueensDetailViewController: UIViewController {
     }
 
     @IBAction func favoriteLibrary(_ sender: UIBarButtonItem) {
-        let favorite = Favorite.init(name: library.name, title: nil, address: library.address, city: library.city, postcode: library.postcode, phone: library.phone, borough: "Queens")
+        let favorite = Favorite.init(name: library.name, address: library.address, city: library.city, postcode: library.postcode, phone: library.phone, borough: "Queens")
         
         do {
             let data = try JSONEncoder().encode(favorite)

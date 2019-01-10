@@ -61,24 +61,8 @@ extension FavoritesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = favoritesTableView.dequeueReusableCell(withIdentifier: "favoritesCell", for: indexPath)
         let library = favorites[indexPath.row]
-        switch library.borough {
-        case "Brooklyn":
-            if let brooklynLibraryName = library.title {
-                cell.textLabel?.text = "[Brooklyn] \(brooklynLibraryName)"
-            }
-            cell.detailTextLabel?.text = library.address
-        case "Queens":
-            if let queensLibraryName = library.name {
-                cell.textLabel?.text = "[Queens] \(queensLibraryName)"
-            }
-            if let zipcode = library.postcode {
-            cell.detailTextLabel?.text = "\(library.address), Queens, NY \(zipcode)"
-            } else {
-                cell.detailTextLabel?.text = "\(library.address), Queens, NY"
-            }
-        default:
-            print("error")
-        }
+        cell.textLabel?.text = "[\(library.borough)] \(library.name)"
+        cell.detailTextLabel?.text = library.address
         return cell
     }
 }

@@ -259,7 +259,7 @@
                                 <rect key="frame" x="11" y="147" width="392" height="309.5"/>
                                 <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation </string>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" address="YES" calendarEvent="YES"/>
                             </textView>
@@ -328,8 +328,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="aLL-4x-vue" kind="relationship" relationship="viewControllers" id="Hwi-bV-GWh"/>
                         <segue destination="IG2-Bc-WV9" kind="relationship" relationship="viewControllers" id="DXD-I7-cSy"/>
+                        <segue destination="aLL-4x-vue" kind="relationship" relationship="viewControllers" id="Hwi-bV-GWh"/>
                         <segue destination="90R-bv-D4e" kind="relationship" relationship="viewControllers" id="2cZ-wY-XZm"/>
                         <segue destination="G9o-T0-clO" kind="relationship" relationship="viewControllers" id="iHA-GR-fkd"/>
                     </connections>
@@ -356,7 +356,7 @@
                                 <rect key="frame" x="11" y="147" width="392" height="309.5"/>
                                 <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation </string>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" address="YES" calendarEvent="YES"/>
                             </textView>
@@ -435,6 +435,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="label" destination="rF5-hv-0qU" id="peP-Ry-ped"/>
+                                            <segue destination="UUW-Dj-d4T" kind="show" id="H6p-qA-dJD"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -485,6 +486,66 @@
                 </view>
             </objects>
             <point key="canvasLocation" x="1073.913043478261" y="-1134.375"/>
+        </scene>
+        <!--Queens Public Library Detail-->
+        <scene sceneID="G4J-TY-p4h">
+            <objects>
+                <viewController title="Queens Public Library Detail" id="UUW-Dj-d4T" customClass="NYPLDetailViewController" customModule="NYCPublicLibraryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Aeq-r9-c0n">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of Library" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Az-5W-p7P">
+                                <rect key="frame" x="11" y="110" width="392" height="26"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="mnY-Kc-Jsv">
+                                <rect key="frame" x="11" y="147" width="392" height="309.5"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation </string>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                            </textView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xRr-Tc-X1H">
+                                <rect key="frame" x="11" y="478.5" width="392" height="361.5"/>
+                                <viewLayoutGuide key="safeArea" id="29H-hX-2UU"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mnY-Kc-Jsv" firstAttribute="leading" secondItem="Aeq-r9-c0n" secondAttribute="leading" constant="11" id="8so-Qq-cDa"/>
+                            <constraint firstItem="xRr-Tc-X1H" firstAttribute="top" secondItem="mnY-Kc-Jsv" secondAttribute="bottom" constant="22" id="GRr-o4-yHr"/>
+                            <constraint firstItem="4Az-5W-p7P" firstAttribute="leading" secondItem="TeV-uT-0f3" secondAttribute="leading" constant="11" id="NZL-k5-fQe"/>
+                            <constraint firstItem="TeV-uT-0f3" firstAttribute="bottom" secondItem="xRr-Tc-X1H" secondAttribute="bottom" constant="22" id="Tbh-xz-qFZ"/>
+                            <constraint firstItem="TeV-uT-0f3" firstAttribute="trailing" secondItem="4Az-5W-p7P" secondAttribute="trailing" constant="11" id="Vnf-6d-6L6"/>
+                            <constraint firstItem="TeV-uT-0f3" firstAttribute="trailing" secondItem="mnY-Kc-Jsv" secondAttribute="trailing" constant="11" id="W8O-Zt-bAC"/>
+                            <constraint firstItem="mnY-Kc-Jsv" firstAttribute="height" secondItem="TeV-uT-0f3" secondAttribute="height" multiplier="0.4" id="WEt-oF-ark"/>
+                            <constraint firstItem="xRr-Tc-X1H" firstAttribute="leading" secondItem="TeV-uT-0f3" secondAttribute="leading" constant="11" id="h3q-1E-ijF"/>
+                            <constraint firstItem="4Az-5W-p7P" firstAttribute="top" secondItem="TeV-uT-0f3" secondAttribute="top" constant="22" id="n5r-G7-lW5"/>
+                            <constraint firstAttribute="trailing" secondItem="xRr-Tc-X1H" secondAttribute="trailing" constant="11" id="xsN-x9-vWv"/>
+                            <constraint firstItem="mnY-Kc-Jsv" firstAttribute="top" secondItem="4Az-5W-p7P" secondAttribute="bottom" constant="11" id="yrn-8A-WvF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TeV-uT-0f3"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="NYPL Detail" id="c5e-q0-6Sa">
+                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="j6G-yb-d7N">
+                            <connections>
+                                <action selector="favoriteLibrary:" destination="UUW-Dj-d4T" id="eTF-mn-bNP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="libraryInfo" destination="mnY-Kc-Jsv" id="PhA-NE-0Or"/>
+                        <outlet property="libraryMapView" destination="xRr-Tc-X1H" id="Ptf-dK-Cd0"/>
+                        <outlet property="libraryName" destination="4Az-5W-p7P" id="zP6-hh-UVy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="84V-Kw-tkq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1074" y="-382"/>
         </scene>
     </scenes>
     <resources>
