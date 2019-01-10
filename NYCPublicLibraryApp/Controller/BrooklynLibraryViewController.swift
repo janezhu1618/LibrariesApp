@@ -12,6 +12,9 @@ class BrooklynLibraryViewController: UIViewController {
     
     @IBOutlet weak var brooklynLibraryTableView: UITableView!
     @IBOutlet weak var brooklynLibrarySearchBar: UISearchBar!
+
+    @IBOutlet var noResultsMessageView: UIView!
+    
     
     private var refreshControl: UIRefreshControl!
     
@@ -37,6 +40,7 @@ class BrooklynLibraryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        brooklynLibraryTableView.backgroundView = noResultsMessageView
         brooklynLibraryTableView.dataSource = self
         brooklynLibrarySearchBar.delegate = self
         brooklynLibraryTableView.delegate = self

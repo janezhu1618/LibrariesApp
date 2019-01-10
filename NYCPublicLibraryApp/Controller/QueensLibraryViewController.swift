@@ -13,6 +13,9 @@ class QueensLibraryViewController: UIViewController {
     @IBOutlet weak var queensLibraryTableView: UITableView!
     @IBOutlet weak var queensLibrarySearchBar: UISearchBar!
     
+
+    @IBOutlet var noResultsMessageView: UIView!
+    
     private var refreshControl: UIRefreshControl!
 
     var queensLibraries = [QueensLibrary]() {
@@ -37,6 +40,7 @@ class QueensLibraryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        queensLibraryTableView.backgroundView = noResultsMessageView
         queensLibraryTableView.dataSource = self
         queensLibrarySearchBar.delegate = self
         queensLibraryTableView.delegate = self

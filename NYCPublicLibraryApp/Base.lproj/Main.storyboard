@@ -73,9 +73,28 @@
                     <connections>
                         <outlet property="brooklynLibrarySearchBar" destination="tEf-Cu-28j" id="KLc-wK-XVF"/>
                         <outlet property="brooklynLibraryTableView" destination="JrN-cA-B9X" id="Lrl-SN-ekv"/>
+                        <outlet property="noResultsMessageView" destination="Of7-bs-Tyx" id="zUR-PA-qvJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qSt-TF-mpX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="Of7-bs-Tyx">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No items" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIj-eb-Ohb">
+                            <rect key="frame" x="86" y="58.5" width="68" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="TIj-eb-Ohb" firstAttribute="centerY" secondItem="d7v-yO-0qK" secondAttribute="centerY" id="8O4-gR-dtk"/>
+                        <constraint firstItem="TIj-eb-Ohb" firstAttribute="centerX" secondItem="d7v-yO-0qK" secondAttribute="centerX" id="Haq-8L-6u5"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="d7v-yO-0qK"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="-307" y="-1134"/>
         </scene>
@@ -138,11 +157,30 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Queens Public Libraries" image="icon" id="W1u-ud-4Oj"/>
                     <connections>
+                        <outlet property="noResultsMessageView" destination="zht-3R-89Y" id="FOa-zG-wsW"/>
                         <outlet property="queensLibrarySearchBar" destination="tMP-3f-Rde" id="11a-lW-LpV"/>
                         <outlet property="queensLibraryTableView" destination="BKX-VK-qlF" id="Jr6-pQ-LEC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CXx-lF-Z1H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="zht-3R-89Y">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No items" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q0m-Uc-inp">
+                            <rect key="frame" x="86" y="58" width="68" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Q0m-Uc-inp" firstAttribute="centerX" secondItem="fqf-33-wFW" secondAttribute="centerX" id="1He-Sm-obS"/>
+                        <constraint firstItem="Q0m-Uc-inp" firstAttribute="centerY" secondItem="fqf-33-wFW" secondAttribute="centerY" id="yNM-N0-8yc"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="fqf-33-wFW"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="365" y="-1134"/>
         </scene>
