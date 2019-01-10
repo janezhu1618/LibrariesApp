@@ -77,6 +77,8 @@ extension QueensLibraryViewController: UITableViewDataSource {
         guard let cell = queensLibraryTableView.dequeueReusableCell(withIdentifier: "queensCell", for: indexPath) as? QueensLibraryTableCell else { return UITableViewCell() }
         if indexPath.row % 2 == 0 {
             cell.backgroundColor = .lightGray
+        } else {
+            cell.backgroundColor = .white
         }
         let library = queensLibraries[indexPath.row]
         cell.label.text = library.name

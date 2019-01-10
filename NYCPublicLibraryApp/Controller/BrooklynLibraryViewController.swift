@@ -72,6 +72,8 @@ extension BrooklynLibraryViewController: UITableViewDataSource {
         let library = brooklynLibraries[indexPath.row]
         if indexPath.row % 2 == 0 {
             cell.backgroundColor = .lightGray
+        } else {
+            cell.backgroundColor = .white
         }
         cell.label.text = library.data.title
         return cell
