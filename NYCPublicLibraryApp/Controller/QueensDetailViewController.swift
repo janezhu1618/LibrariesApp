@@ -34,8 +34,7 @@ class QueensDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         libraryName.text = library.name
-        libraryInfo.text = "Address:\n" + QueensLibraryFormatter.formatCompleteAddress(streetAddress: library.address, borough: "Queens", postcode: library.postcode) + "\n\nPhone Number: " + library.phone + "\n\nHours of Operation:\n" + QueensLibraryFormatter.formatHoursOfOperation(mon: library.mn, tue: library.tu
-            , wed: library.we, thurs: library.th, fri: library.fr, sat: library.sa, sun: library.su)
+        libraryInfo.text = "Address:\n"  
         setUpMap()
     }
     

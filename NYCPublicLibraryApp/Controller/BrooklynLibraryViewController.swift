@@ -60,9 +60,8 @@ class BrooklynLibraryViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let destination = segue.destination as? BrooklynDetailViewController, let indexPath = brooklynLibraryTableView.indexPathForSelectedRow else { return }
-        let library = brooklynLibraries[indexPath.row]
-        destination.library = library
+        guard let destination = segue.destination as? LibraryDetailViewController, let indexPath = brooklynLibraryTableView.indexPathForSelectedRow else { return }
+        destination.brooklynLibrary = brooklynLibraries[indexPath.row]
     }
 
 }

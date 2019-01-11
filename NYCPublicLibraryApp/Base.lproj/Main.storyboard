@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="144" width="414" height="669"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="brooklynCell" id="fmq-Br-5Bs" customClass="BrooklynLibraryCell" customModule="NYCPublicLibraryApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="brooklynCell" id="fmq-Br-5Bs" customClass="BrooklynLibraryCell" customModule="NYCPublicLibraryApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fmq-Br-5Bs" id="tHz-oV-x9Y">
@@ -110,7 +110,7 @@
                                 <rect key="frame" x="0.0" y="144" width="414" height="669"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="queensCell" id="EfO-Nk-hTM" customClass="QueensLibraryCell" customModule="NYCPublicLibraryApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="queensCell" id="EfO-Nk-hTM" customClass="QueensLibraryCell" customModule="NYCPublicLibraryApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EfO-Nk-hTM" id="Ehu-Yb-WCb">
@@ -133,7 +133,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="label" destination="yt2-Nl-hwQ" id="Zjh-8L-xiZ"/>
-                                            <segue destination="wuG-St-SrE" kind="show" id="XJe-Ug-8nx"/>
+                                            <segue destination="IWi-D1-zIy" kind="show" id="DRe-jq-YbD"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -168,7 +168,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No items" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q0m-Uc-inp">
-                            <rect key="frame" x="86" y="58" width="68" height="21"/>
+                            <rect key="frame" x="86" y="58.5" width="68" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -196,7 +196,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="favoritesCell" textLabel="3AM-2f-hpE" detailTextLabel="EAX-TL-Yh8" style="IBUITableViewCellStyleSubtitle" id="1mP-JQ-sCj">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="favoritesCell" textLabel="3AM-2f-hpE" detailTextLabel="EAX-TL-Yh8" style="IBUITableViewCellStyleSubtitle" id="1mP-JQ-sCj">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1mP-JQ-sCj" id="jgx-8Z-e6E">
@@ -239,67 +239,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3D1-rM-GUk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2684" y="-1539"/>
-        </scene>
-        <!--Queens Public Library Detail-->
-        <scene sceneID="bcg-Hf-zNx">
-            <objects>
-                <viewController title="Queens Public Library Detail" id="wuG-St-SrE" customClass="QueensDetailViewController" customModule="NYCPublicLibraryApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="6tt-Di-4a0">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of Library" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42a-Wh-xoj">
-                                <rect key="frame" x="11" y="110" width="392" height="26"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2W2-jk-ZY8">
-                                <rect key="frame" x="11" y="147" width="392" height="309.5"/>
-                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <string key="text">Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation </string>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" address="YES" calendarEvent="YES"/>
-                            </textView>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="KUK-fP-uCe">
-                                <rect key="frame" x="11" y="478.5" width="392" height="361.5"/>
-                                <viewLayoutGuide key="safeArea" id="0xg-fm-a5I"/>
-                            </mapView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="42a-Wh-xoj" firstAttribute="top" secondItem="TSQ-0r-Gr4" secondAttribute="top" constant="22" id="5it-wa-ScE"/>
-                            <constraint firstItem="TSQ-0r-Gr4" firstAttribute="trailing" secondItem="2W2-jk-ZY8" secondAttribute="trailing" constant="11" id="CDl-69-D03"/>
-                            <constraint firstAttribute="trailing" secondItem="KUK-fP-uCe" secondAttribute="trailing" constant="11" id="KhA-yP-Fcq"/>
-                            <constraint firstItem="42a-Wh-xoj" firstAttribute="leading" secondItem="TSQ-0r-Gr4" secondAttribute="leading" constant="11" id="LTh-QF-cd8"/>
-                            <constraint firstItem="2W2-jk-ZY8" firstAttribute="height" secondItem="TSQ-0r-Gr4" secondAttribute="height" multiplier="0.4" id="MnG-lf-Hnu"/>
-                            <constraint firstItem="KUK-fP-uCe" firstAttribute="leading" secondItem="TSQ-0r-Gr4" secondAttribute="leading" constant="11" id="Syo-ex-2dM"/>
-                            <constraint firstItem="2W2-jk-ZY8" firstAttribute="top" secondItem="42a-Wh-xoj" secondAttribute="bottom" constant="11" id="TJJ-bi-4Ab"/>
-                            <constraint firstItem="TSQ-0r-Gr4" firstAttribute="bottom" secondItem="KUK-fP-uCe" secondAttribute="bottom" constant="22" id="TLH-P2-RZh"/>
-                            <constraint firstItem="KUK-fP-uCe" firstAttribute="top" secondItem="2W2-jk-ZY8" secondAttribute="bottom" constant="22" id="Wkc-ox-hCQ"/>
-                            <constraint firstItem="2W2-jk-ZY8" firstAttribute="leading" secondItem="6tt-Di-4a0" secondAttribute="leading" constant="11" id="kBG-vw-Dcb"/>
-                            <constraint firstItem="TSQ-0r-Gr4" firstAttribute="trailing" secondItem="42a-Wh-xoj" secondAttribute="trailing" constant="11" id="nR2-I3-PjV"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="TSQ-0r-Gr4"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Queens Library Detail" id="hth-01-yMM">
-                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="xeE-aI-kL4">
-                            <connections>
-                                <action selector="favoriteLibrary:" destination="wuG-St-SrE" id="Clx-IB-J7z"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="libraryInfo" destination="2W2-jk-ZY8" id="duK-aI-zov"/>
-                        <outlet property="libraryMapView" destination="KUK-fP-uCe" id="OXa-7c-83v"/>
-                        <outlet property="libraryName" destination="42a-Wh-xoj" id="rDy-jB-UcW"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HHT-fb-dAx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="364" y="-382"/>
+            <point key="canvasLocation" x="1923" y="-1134"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Mz8-x3-9VU">
@@ -341,7 +281,7 @@
         <!--Brookyn Public Library Detail-->
         <scene sceneID="GPs-Iz-4gV">
             <objects>
-                <viewController title="Brookyn Public Library Detail" id="IWi-D1-zIy" customClass="BrooklynDetailViewController" customModule="NYCPublicLibraryApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Brookyn Public Library Detail" id="IWi-D1-zIy" customClass="LibraryDetailViewController" customModule="NYCPublicLibraryApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ocW-Fm-DNV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -358,7 +298,7 @@
                                 <string key="text">Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation </string>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" address="YES" calendarEvent="YES"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
                             </textView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cOD-J5-4Pf">
                                 <rect key="frame" x="11" y="478.5" width="392" height="372.5"/>
@@ -381,7 +321,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fNM-Wo-Cpc"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Brooklyn Library Detail" id="VaF-Cb-deu">
+                    <navigationItem key="navigationItem" title="Library Detail" id="VaF-Cb-deu">
                         <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="Ej4-cm-ja9">
                             <connections>
                                 <action selector="favoriteLibrary:" destination="IWi-D1-zIy" id="Q5d-iD-PYk"/>
@@ -389,9 +329,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="libraryInfo" destination="eHW-MW-YFm" id="QPn-gI-CvO"/>
+                        <outlet property="libraryInfoTextView" destination="eHW-MW-YFm" id="QPn-gI-CvO"/>
                         <outlet property="libraryMap" destination="cOD-J5-4Pf" id="X2O-SF-ge0"/>
-                        <outlet property="libraryName" destination="Sig-7b-xbv" id="kes-pE-v89"/>
+                        <outlet property="libraryNameLabel" destination="Sig-7b-xbv" id="kes-pE-v89"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h4y-Hw-Q5e" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -410,7 +350,7 @@
                                 <rect key="frame" x="0.0" y="144" width="414" height="669"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="nyplCell" id="9gk-d9-NJd" customClass="NYPLCell" customModule="NYCPublicLibraryApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="nyplCell" id="9gk-d9-NJd" customClass="NYPLCell" customModule="NYCPublicLibraryApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9gk-d9-NJd" id="olp-Dl-7dK">
@@ -435,7 +375,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="label" destination="rF5-hv-0qU" id="peP-Ry-ped"/>
-                                            <segue destination="UUW-Dj-d4T" kind="show" id="H6p-qA-dJD"/>
+                                            <segue destination="IWi-D1-zIy" kind="show" id="LAu-jn-xwE"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -487,69 +427,12 @@
             </objects>
             <point key="canvasLocation" x="1073.913043478261" y="-1134.375"/>
         </scene>
-        <!--Queens Public Library Detail-->
-        <scene sceneID="G4J-TY-p4h">
-            <objects>
-                <viewController title="Queens Public Library Detail" id="UUW-Dj-d4T" customClass="NYPLDetailViewController" customModule="NYCPublicLibraryApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Aeq-r9-c0n">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of Library" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Az-5W-p7P">
-                                <rect key="frame" x="11" y="110" width="392" height="26"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="mnY-Kc-Jsv">
-                                <rect key="frame" x="11" y="147" width="392" height="309.5"/>
-                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <string key="text">Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation Address Here, Brooklyn, NY 11219 Phone Number Hours of Operation </string>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
-                            </textView>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xRr-Tc-X1H">
-                                <rect key="frame" x="11" y="478.5" width="392" height="361.5"/>
-                                <viewLayoutGuide key="safeArea" id="29H-hX-2UU"/>
-                            </mapView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="mnY-Kc-Jsv" firstAttribute="leading" secondItem="Aeq-r9-c0n" secondAttribute="leading" constant="11" id="8so-Qq-cDa"/>
-                            <constraint firstItem="xRr-Tc-X1H" firstAttribute="top" secondItem="mnY-Kc-Jsv" secondAttribute="bottom" constant="22" id="GRr-o4-yHr"/>
-                            <constraint firstItem="4Az-5W-p7P" firstAttribute="leading" secondItem="TeV-uT-0f3" secondAttribute="leading" constant="11" id="NZL-k5-fQe"/>
-                            <constraint firstItem="TeV-uT-0f3" firstAttribute="bottom" secondItem="xRr-Tc-X1H" secondAttribute="bottom" constant="22" id="Tbh-xz-qFZ"/>
-                            <constraint firstItem="TeV-uT-0f3" firstAttribute="trailing" secondItem="4Az-5W-p7P" secondAttribute="trailing" constant="11" id="Vnf-6d-6L6"/>
-                            <constraint firstItem="TeV-uT-0f3" firstAttribute="trailing" secondItem="mnY-Kc-Jsv" secondAttribute="trailing" constant="11" id="W8O-Zt-bAC"/>
-                            <constraint firstItem="mnY-Kc-Jsv" firstAttribute="height" secondItem="TeV-uT-0f3" secondAttribute="height" multiplier="0.4" id="WEt-oF-ark"/>
-                            <constraint firstItem="xRr-Tc-X1H" firstAttribute="leading" secondItem="TeV-uT-0f3" secondAttribute="leading" constant="11" id="h3q-1E-ijF"/>
-                            <constraint firstItem="4Az-5W-p7P" firstAttribute="top" secondItem="TeV-uT-0f3" secondAttribute="top" constant="22" id="n5r-G7-lW5"/>
-                            <constraint firstAttribute="trailing" secondItem="xRr-Tc-X1H" secondAttribute="trailing" constant="11" id="xsN-x9-vWv"/>
-                            <constraint firstItem="mnY-Kc-Jsv" firstAttribute="top" secondItem="4Az-5W-p7P" secondAttribute="bottom" constant="11" id="yrn-8A-WvF"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="TeV-uT-0f3"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="NYPL Detail" id="c5e-q0-6Sa">
-                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="j6G-yb-d7N">
-                            <connections>
-                                <action selector="favoriteLibrary:" destination="UUW-Dj-d4T" id="eTF-mn-bNP"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="libraryInfo" destination="mnY-Kc-Jsv" id="PhA-NE-0Or"/>
-                        <outlet property="libraryMapView" destination="xRr-Tc-X1H" id="Ptf-dK-Cd0"/>
-                        <outlet property="libraryName" destination="4Az-5W-p7P" id="zP6-hh-UVy"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="84V-Kw-tkq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1074" y="-382"/>
-        </scene>
     </scenes>
     <resources>
         <image name="favorite" width="36" height="36"/>
         <image name="icon" width="36" height="36"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="LAu-jn-xwE"/>
+    </inferredMetricsTieBreakers>
 </document>

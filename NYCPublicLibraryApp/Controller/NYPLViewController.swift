@@ -55,10 +55,9 @@ class NYPLViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let destination = segue.destination as? NYPLDetailViewController, let indexPath = nyplTableView.indexPathForSelectedRow
+        guard let destination = segue.destination as? LibraryDetailViewController, let indexPath = nyplTableView.indexPathForSelectedRow
             else { return }
-        let library = nypl[indexPath.section][indexPath.row]
-        destination.library = library
+        destination.nyplLibrary = nypl[indexPath.section][indexPath.row]
     }
     
 }

@@ -27,11 +27,11 @@ struct QueensLibrary: Codable {
 
 
 struct QueensLibraryFormatter {
-    static func formatCompleteAddress(streetAddress: String, borough: String, postcode: String) -> String {
-        return "\(streetAddress), \(borough), NY \(postcode)"
+    static func formatCompleteAddress(library: QueensLibrary) -> String {
+        return "\(library.address), Queens, NY \(library.postcode)"
     }
     
-    static func formatHoursOfOperation(mon: String, tue: String, wed: String, thurs: String, fri: String, sat: String, sun: String) -> String {
-        return "Monday: \(mon) \nTuesday: \(tue) \nWednesday: \(wed) \nThursday: \(thurs) \nFriday: \(fri) \nSaturday: \(sat) \nSunday: \(sun)"
+    static func formatHoursOfOperation(library: QueensLibrary) -> String {
+        return "Monday: \(library.mn) \nTuesday: \(library.tu) \nWednesday: \(library.we) \nThursday: \(library.th) \nFriday: \(library.fr) \nSaturday: \(library.sa) \nSunday: \(library.su)"
     }
 }

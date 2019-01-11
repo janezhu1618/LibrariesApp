@@ -24,7 +24,7 @@ struct CoordinatesWrap: Codable {
 }
 
 struct NYPLFormatter {
-    static func formatCompleteAddress(houseNum: String?, street: String, city: String, zip: String) -> String {
-        return "\(houseNum ?? "") \(street), \(city), NY \(zip)"
+    static func formatCompleteAddress(library: NYPL) -> String {
+        return "\(library.housenum ?? "") \(library.streetname), \(library.city), NY \(library.zip)"
     }
 }

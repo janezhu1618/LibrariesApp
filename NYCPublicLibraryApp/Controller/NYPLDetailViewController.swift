@@ -30,7 +30,7 @@ class NYPLDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         libraryName.text = library.name
-        libraryInfo.text = "Address:\n" + NYPLFormatter.formatCompleteAddress(houseNum: library.housenum, street: library.streetname, city: library.city, zip: library.zip) + "\n\nWebsite:\n" + library.url 
+        libraryInfo.text = "Address:\n" 
         setUpMap()
     }
     

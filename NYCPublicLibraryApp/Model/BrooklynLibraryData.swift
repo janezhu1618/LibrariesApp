@@ -36,8 +36,8 @@ struct BrooklynLibraryFormatter {
         return "Phone: " + phone.replacingOccurrences(of: ".", with: "-")
     }
     
-    static func formatHoursOfOperation(mon: String, tue: String, wed: String, thurs: String, fri: String, sat: String, sun: String) -> String {
-        let arrOfDays = [mon, tue, wed, thurs, fri, sat, sun]
+    static func formatHoursOfOperation(library: BPLLocationsWrap) -> String {
+        let arrOfDays = [library.data.Monday, library.data.Tuesday, library.data.Wednesday, library.data.Thursday, library.data.Friday, library.data.Saturday, library.data.Sunday]
         var updatedArr: [String] = []
         for day in arrOfDays {
             if day != "" {

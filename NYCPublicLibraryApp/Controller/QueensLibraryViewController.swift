@@ -58,10 +58,9 @@ class QueensLibraryViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let destination = segue.destination as? QueensDetailViewController, let indexPath = queensLibraryTableView.indexPathForSelectedRow
+        guard let destination = segue.destination as? LibraryDetailViewController, let indexPath = queensLibraryTableView.indexPathForSelectedRow
             else { return }
-        let library = queensLibraries[indexPath.row]
-        destination.library = library
+        destination.queensLibrary = queensLibraries[indexPath.row]
     }
 }
 
